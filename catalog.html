@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <header>
+            <a href="index.html">
+                <img src="img/logo.svg" alt="Логотип магазина" width="145" height="36">
+            </a>
+            <form action="#" method="get">
+                <input type="text" placeholder="Текст поиска">
+                <button type="submit">Найти</button>
+            </form>
+            <a href="#">Войти</a>
+            <a href="#">Выйти</a>
+            <a href="#">Сравнить</a>
+            <button type="button">Корзина</button>
+            <div calss="pop-up-bascet">
+                <ul>
+                    <li>
+                        <a href="blank.html">
+                            <img src="img/product-1-small-5.svg" alt="Любительская селфи-палка" width="39" height="43">
+                            Любительская селфи-палка
+                        </a>
+                        <button type="button">Удалить из корзины</button>
+                    </li>
+                    <li>
+                        <a href="blank.html">
+                            <img src="img/product-2-small-5.png" alt="Профессиональная селфи-палка" width="39" height="43">
+                            Профессиональная селфи-палка
+                        </a>
+                        <button type="button">Удалить из корзины</button>
+                    </li>
+                </ul>
+                <dl>
+                    <dt>Товаров:</dt>
+                    <dd>2</dd>
+    
+                    <dt>Сумма:</dt>
+                    <dd>2000 ₽</dd>
+                </dl>
+                <a href="blank.html">
+                    Открыть корзину
+                </a>
+            </div>
+            
+            <button type="button">
+                Каталог товаров<img src="img/catalog-on.png" alt="Открыть каталог" width="50" height="50">
+            </button>
+            <div> <!--раскрывающееся меню-->
+                <p>
+                    <ul>
+                        <li><a href="blanc.html">Виртуальная реальность</a></li>
+                        <li><a href="blanc.html">Моноподы для cелфи</a></li>
+                        <li><a href="blanc.html">Экшн-камеры
+                        </a></li>
+                    </ul>
+                </p>
+                <p>
+                    <ul>
+                        <li><a href="blanc.html">Фитнес-браслеты</a></li>
+                        <li><a href="blanc.html">Умные часы</a></li>
+                    </ul>
+                </p>
+                <p>
+                    <ul>
+                        <li><a href="blanc.html">Квадрокоптеры</a></li>
+                    </ul>
+                </p>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li><a href="blanc.html">Доставка</a></li>
+                    <li><a href="blanc.html">Гарантия</a></li>
+                    <li><a href="blanc.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+
+            <h1>Моноподы для селфи</h1>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html">Каталог товаров</a></li>
+                <li>Моноподы для селфи</li>
+            </ul>
+
+            <section> <!--фильтр-->
+                <h2>фильтр:</h2>
+                <form action="#" method="get">
+                    <fieldset>
+                        <legend>Стоимость</legend>
+                        <input type="range">
+                        <input type="text" placeholder="От 0">
+                        <input type="text" placeholder="До 5000">
+                    </fieldset>
+                    <fieldset>   
+                        <legend>Цвет</legend>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="black" id="filter-black" checked>
+                                <label for="filter-black">Черный</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="white" id="filter-white" checked>
+                                <label for="filter-white">Белый</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="blue" id="filter-blue">
+                                <label for="filter-blue">Синий</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="red" id="filter-red">
+                                <label for="filter-red">Красный</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="pink" id="filter-pink">
+                                <label for="filter-pink">Розовый</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Bluetooth</legend>
+                        <ul>
+                            <li>
+                                <input type="radio" name="Bluetooth" value="true" id="filter-bluetooth-yes" checked>
+                                <label for="filter-bluetooth-yes">Есть</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Bluetooth" value="false" id="filter-bluetooth-no">
+                                <label for="filter-bluetooth-no">Нет</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit">Показать</button>
+                </form>
+            </section>
+
+           
+
+            <section> <!--страница каталога-->
+
+                <div> <!--Может тут должна быть форма, т.к. мы отправляем данные о сортировке. Надо уточнить-->
+                    <h2>сортировка:</h2>
+                    <button type="button">Популярные</button>
+                    <button type="button"><img src="img/change-filter.png" alt="сортировка" width="30" height="30"></button>
+                    <button type="button"><img src="img/sort-item-up.png" alt="сортировка" width="30" height="30"></button>
+                    <button type="button"><img src="img/sort-item-down.png" alt="сортировка" width="30" height="30"></button>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="#"><img src="img/catalog-product-1.png" alt="Любительская
+                        селфи-палка" width="360" height="380">
+                            <img src="img/new-mark.png" alt="новинка" width="60" height="60">
+                            <dl>
+                                <dt>Любительская<br>селфи-палка</dt>
+                                <dd>500 ₽</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/catalog-product-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
+                            <img src="img/new-mark.png" alt="новинка" width="60" height="60">
+                            <dl>
+                                <dt>Профессиональная<br>селфи-палка</dt>
+                                <dd>1 500 ₽</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/catalog-product-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
+                            <img src="img/new-mark.png" alt="новинка" width="60" height="60">
+                            <dl>
+                                <dt>Непотопляемая<br>селфи-палка</dt>
+                                <dd>2 500 ₽</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/catalog-product-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+                            <img src="img/new-mark.png" alt="новинка" width="60" height="60">
+                            <dl>
+                                <dt>Селфи-палка «Следуй за<br>мной»</dt>
+                                <dd>1 500 ₽</dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+                
+                <button type="button">Загрузить ещё</button>
+
+                <div> <!--навигация по каталогу-->
+                    <button type="button">назад</button>
+                    <ul>
+                        <li>
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">...</a>
+                        </li>
+                        <li>
+                            <a href="#">15</a>
+                        </li>
+                    </ul>
+                    <button type="button">вперёд</button>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer>
+            <section>
+                <a href="index.html"><img src="img/logo-footer.png" alt="логотип" width="144.9" height="36"></a>
+                <p>Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
+                </p>
+                <img src="img/line-footer.png" alt="футер" width="80" height="7">
+            </section>
+    
+            <section>
+                <ul>
+                    <li>
+                        <a href="#">Доставка</a>
+                    </li>
+                    <li>
+                        <a href="#">Гарантия</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">Фейсбук</a>
+                    </li>
+                    <li>
+                        <a href="#">Инстаграм</a>
+                    </li>
+                    <li>
+                        <a href="#">Твиттер</a>
+                    </li>
+                </ul>
+            </section>
+    
+            <section>
+                <p><a href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+                </p>
+                <a href="#"><img src="img/logo-developer.png" alt="разработчик" width="115" height="33"></a>
+            </section>
+        </footer>
+
+    </body>
+
+
+    
+</html>
