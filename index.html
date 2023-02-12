@@ -16,9 +16,8 @@
             <button type="submit">Найти</button>
         </form>
         <a href="#">Войти</a>
-        <a href="#">Выйти</a>
         <a href="#">Сравнить</a>
-        <button type="button">Корзина</button>
+        <a href="#">Корзина</a> <!--заменил так как это скорее ссылка, чем кнопка открытия поповера. Поповер по ховеру-->
         <div id="pop-up-bascet">
             <ul>
                 <li>
@@ -36,41 +35,34 @@
                     <button type="button">Удалить из корзины</button>
                 </li>
             </ul>
-            <dl>
-                <dt>Товаров:</dt>
-                <dd>2</dd>
-
-                <dt>Сумма:</dt>
-                <dd>2000 ₽</dd>
-            </dl>
+            <p>Товаров: 2</p> <!--из dl-dt-dd передалли в два p, т.к. 1. это проще стилизовать и размещать; 2. dl-dt-dd в основном для задания свойств, характеристик-->
+            <p>Сумма: 2000 ₽</p>
             <a href="blank.html">
                 Открыть корзину
             </a>
         </div>
         
-        <button type="button">
-            Каталог товаров<img src="img/catalog-on.png" alt="Открыть каталог" width="50" height="50">
-        </button>
-        <div> <!--раскрывающееся меню-->
-            <div>
+        <button type="button">Каталог товаров</button>
+        <ul> <!--раскрывающееся меню. В виде списка списков, удобно для стилизации, семантически правильно. ОК-->
+            <li>
                 <ul>
                     <li><a href="blanc.html">Виртуальная реальность</a></li>
                     <li><a href="blanc.html">Моноподы для cелфи</a></li>
                     <li><a href="blanc.html">Экшн-камеры</a></li>
                 </ul>
-            </div>
-            <div>
+            </li>
+            <li>    
                 <ul>
                     <li><a href="blanc.html">Фитнес-браслеты</a></li>
                     <li><a href="blanc.html">Умные часы</a></li>
                 </ul>
-            </div>
-            <div>
+            </li>
+            <li>
                 <ul>
                     <li><a href="blanc.html">Квадрокоптеры</a></li>
                 </ul>
-            </div>
-        </div>
+            </li>
+        </ul>
 
         <nav>
             <ul>
@@ -87,179 +79,161 @@
         <section> <!--Слайдер-->
             <h2>Рекомендации</h2>
 
-            <div> <!--первый слайд-->
-                <p><span>01</span></p>
+            <ul> <!--навигация по слайдеру-->
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>    
 
-                <button type="button">
-                    <img src="img/arrow-left.png" alt="left-slide" width="20" height="60">
-                </button>
+            <!-- список слайдов. Надо ил оборачивать в список дополнительно? или заменить ARTICL на li-->
+            <article>
+                <p>01</p>
+                <button type="button">Влево</button> <!--названия не будет-->
                 <figure> <!--помещаем картинку для выделения демонстрационного материала-->
                     <a href=""><img src="img/slider-1.png" alt="квадрокоптер с лазером" width="560" height="560"></a>
                 </figure>
-                <button type="button"> <!--наверное это должна быть ссылка, но возможно кнопка-->
-                    <img src="img/arrow-right.png" alt="right-slide" width="20" height="60">
-                </button>
-    
-                <p>Порхает как бабочка,<br> жалит как пчела!</p>
+                <button type="button">Вправо</button>
+                
+                <h3>Порхает как бабочка,<br> жалит как пчела!</h3>
     
                 <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.
                 </p>
     
-                <p><a href="#">Подробнее</a></p>
-                <ul> <!--хлебный крошки для слайда-->
-                    <li><a href="#"></a></li><!--оформить с помощью картинок или radio? Кнопка или ссылка? На сайте алика это просто div например-->
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
+                <a href="#">Подробнее</a>                
     
-                <table> <!--добавил третье значение, т.к. на одном из слайдов их 3-->
-                    <tr><td>800 м</td><td>50 м</td><td></td></tr>
-                    <tr><th>Дальность полета</th><th>Радиус поражения</th><th></th></tr>
+                <table>
+                    <tr>
+                        <td>800 м</td>
+                        <td>50 м</td>
+                    </tr>
+                    <tr>
+                        <th>Дальность полета</th>
+                        <th>Радиус поражения</th>
+                    </tr>
                 </table>
-            </div>
+            </article>
 
-            <div> <!--второй слайд-->
-                <p><span>02</span></p>
+            <article> <!--второй слайд-->
+                <p>02</p>
 
-                <button type="button">
-                    <img src="img/arrow-left.png" alt="left-slide" width="20" height="60">
-                </button>
-                <figure> <!--помещаем картинку для выделения демонстрационного материала-->
+                <button type="button">Влево</button>
+                <figure>
                     <a href=""><img src="img/slider-2.png" alt="Фитнес-браслет" width="560" height="560"></a>
                 </figure>
-                <button type="button"> <!--наверное это должна быть ссылка, но возможно кнопка-->
-                    <img src="img/arrow-right.png" alt="right-slide" width="20" height="60">
-                </button>
+                <button type="button">Вправо</button>
     
-                <p>Худеем<br>правильно!</p>
+                <h3>Худеем<br>правильно!</h3>
     
                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы <br> не пропускать занятия и соблюдать диету.
                 </p>
     
                 <p><a href="#">Подробнее</a></p>
-                <ul> <!--хлебный крошки для слайда-->
-                    <li><a href="#"></a></li><!--оформить с помощью картинок или radio? Кнопка или ссылка? На сайте алика это просто div например-->
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
     
-                <table> <!--добавил третье значение, т.к. на одном из слайдов их 3-->
-                    <tr><td>48 часов</td><td></td><td></td></tr>
-                    <tr><th>Без подзарядки</th><th></th><th></th></tr>
+                <table>
+                    <tr>
+                        <td>48 часов</td>   
+                    </tr>
+                    <tr>
+                        <th>Без подзарядки</th>
+                    </tr>
                 </table>
-            </div>
+            </article>
 
-            <div> <!--третий слайд-->
-                <p><span>03</span></p>
+            <article> <!--третий слайд-->
+                <p>03</p>
 
-                <button type="button">
-                    <img src="img/arrow-left.png" alt="left-slide" width="20" height="60">
-                </button>
-                <figure> <!--помещаем картинку для выделения демонстрационного материала-->
+                <button type="button">Влево</button>
+                <figure>
                     <a href=""><img src="img/slider-3.png" alt="Селфи-палка" width="560" height="560"></a>
                 </figure>
-                <button type="button"> <!--наверное это должна быть ссылка, но возможно кнопка-->
-                    <img src="img/arrow-right.png" alt="right-slide" width="20" height="60">
-                </button>
+                <button type="button">Вправо</button>
     
-                <p>Делай селфи,<br>как Бен Стиллер!</p>
+                <h3>Делай селфи,<br>как Бен Стиллер!</h3>
     
                 <p>Самая длинная палка для селфи доступна в нашем магазине. <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
                 </p>
     
                 <p><a href="#">Подробнее</a></p>
-                <ul> <!--хлебный крошки для слайда-->
-                    <li><a href="#"></a></li><!--оформить с помощью картинок или radio? Кнопка или ссылка? На сайте алика это просто div например-->
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
     
-                <table> <!--добавил третье значение, т.к. на одном из слайдов их 3-->
-                    <tr><td>8,5 м</td><td>5 кг</td><td>Карбон</td></tr>
-                    <tr><th>Длина палки</th><th>Вес палки</th><th>Материал</th></tr>
+                <table>
+                    <tr>
+                        <td>8,5 м</td>
+                        <td>5 кг</td>
+                        <td>Карбон</td>
+                    </tr>
+                    <tr>
+                        <th>Длина палки</th>
+                        <th>Вес палки</th>
+                        <th>Материал</th>
+                    </tr>
                 </table>
-            </div>
+            </article>
             
         </section>
 
         <section>
             <h2>Каталог</h2>
             <nav>
-                <ul> <!--Размеры для кратинок не устанавливал, т..к они очень индивидуальные-->
+                <ul>
                     <li><a href="#">
-                        <img src="/img/nav-virtual-real.png" alt="Виртуальная реальность">
                         <p>Виртуальная<br> реальность</p>
                     </a></li>
                     <li><a href="#">
-                        <img src="/img/nav-monopod-for-selfi.png" alt="Моноподы для селфи">
                         <p>Моноподы<br> для селфи</p>
                     </a></li>
                     <li><a href="#">
-                        <img src="/img/nav-action-camera.png" alt="Экшн-камеры">
                         <p>Экшн-камеры</p>
                     </a></li>
                     <li><a href="#">
-                        <img src="/img/nav-fitness-bracelet.png" alt="Фитнес-браслеты">
                         <p>Фитнес-браслеты</p>
                     </a></li>
                     <li><a href="#">
-                        <img src="/img/nav-smart-watch.png" alt="Умные часы">
                         <p>Умные часы</p>
                     </a></li>
                     <li><a href="#">
-                        <img src="/img/nav-quadrocopter.png" alt="Квадрокоптеры">
                         <p>Квадрокоптеры</p>
                     </a></li>
                 </ul>
             </nav>
         </section>
 
-        <section>
-            <h2>Преимущества</h2>
+        <section> <!--Секцию в секцию можно помещать. Сделано-->
+            <h2>Сервисы</h2>
             <ul>
                 <li><button type="button">Доставка</button></li>
                 <li><button type="button">Гарантия</button></li>
                 <li><button type="button">Кредит</button></li>
             </ul>
 
-            <div> <!--вкладка доставки-->
+            <section> <!--вкладка доставки-->
                 <h3>Доставка</h3>
                 <p>Мы с удовольствием доставим ваш товар прямо<br>
                     к вашему подъезду совершенно бесплатно! Ведь<br>
                     мы неплохо заработаем, поднимая его на ваш этаж.
                 </p>
-                <img src="img/delivery.png" alt="Доставка" width="136" height="164">
-            </div>
+            </section>
 
-            <div> <!--Вкладка Гарантия-->
+            <section> <!--Вкладка Гарантия-->
                 <h3>Гарантия</h3>
                 <p>Если из-за возгорания купленного у нас товара у вас<br>
                     сгорит дом — не переживайте, мы выдадим вам новый. <br>
                     Товар, не дом, конечно же.
                 </p>
-                <img src="img/security.png" alt="Доставка" width="171" height="195">
-            </div>
+            </section>
 
-            <div> <!--вкладка Кредит-->
+            <section> <!--вкладка Кредит-->
                 <h3>Кредит</h3>
                 <p>Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для банка, разумеется.
                 </p>
-                <img src="img/credit.png" alt="Доставка" width="156" height="188">
-            </div>
+            </section>
             
         </section>
 
-        <section>
-            <h2>Доставка</h2>
-            <a href="blank.html">
-                <img src="img/delivery-pic.png" alt="Доставим товар" width="47" height="31">
-                Доставим редкий товар под заказ
-                <img src="img/info-delivery.png" alt="Доставим товар" width="40" height="40">
-            </a>
-        </section>
+        <h2>Доставим редкий товар под заказ</h2>
+        <button>кнопка иконка инфо</button>
+
 
         <section>
-            <img src="img/line-for-h.png" alt="линия для заголовков" width="84" height="7">
             <h2>О нас</h2>
             <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
             <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
@@ -272,7 +246,6 @@
         </section>
 
         <section>
-            <img src="img/line-for-h.png" alt="линия для заголовков" width="84" height="7">
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис.<br> 
                 Заодно сможете проверить работоспособность покупки.
@@ -294,16 +267,14 @@
             <p>Еженедельный дайджест с обзорами новинок,
                 длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
 
-            <p>
-                <form action="#" method="post"> <!--лэйбл должен обязательно быть до input к которому применяется? Вроде можно-->
-                    input id="email-subscribe" type="email" placeholder="Ваш e-mail">
-                    <label for="email-subscribe">
-                        <button type="submit">Подписаться</button> <!--нужен ли поиск? Поидее нет, но он есть на стайлгайде и был скрыт на главной-->
-                    </label>  
-                </form>
+            <form action="#" method="post"> <!--лэйбл должен обязательно быть до input к которому применяется? Вроде можно-->
+                <input id="email-subscribe" type="email" placeholder="Ваш e-mail">
+                <label for="email-subscribe"></label> 
+                <button type="submit">Подписаться</button>
+            </form>
 
-                <img src="img/pict-status-ok.png" alt="это бесплатно" width="16" height="16">Это бесплатно
-            </p>
+            <p>Это бесплатно</p>
+
         </section>
 
 
@@ -312,13 +283,14 @@
 
     <footer>
         <section>
-            <a href="index.html"><img src="img/logo-footer.png" alt="логотип" width="144.9" height="36"></a>
+            <h2>Как нас найти?</h2>
+            <a href="index.html"><img src="img/logo-footer.png" alt="логотип" width="144,9" height="36"></a>
             <p>Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
             </p>
-            <img src="img/line-footer.png" alt="футер" width="80" height="7">
         </section>
 
         <section>
+            <h2>сервисы и соцсети</h2>
             <ul>
                 <li>
                     <a href="#">Доставка</a>
@@ -344,6 +316,7 @@
         </section>
 
         <section>
+            <h2>Как с нами связаться</h2>
             <p><a href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
             </p>
             <a href="#"><img src="img/logo-developer.png" alt="разработчик" width="115" height="33"></a>
@@ -354,31 +327,25 @@
     <section><!--модальное окно для оформления доставки-->
             <h2>Доставка под заказ</h2>
             <form action="#" method="post">
-                <p>
-                    <label for="user-name-delivery">Ваше имя:</label>
-                    <input id="user-name-delivery" type="text" placeholder="Введите имя">
-                    <img src="img/form-user-name-delivery.png" alt="имя" width="13" height="12">
+
+                <label for="user-name-delivery">Ваше имя:</label>
+                <input id="user-name-delivery" type="text" placeholder="Введите имя">
+
+                <label for="email-delivery">Ваш e-mail:</label>
+                <input id="email-delivery" type="email" placeholder="Введите e-mail">
+
+                <label for="request-delivery">Что нужно привезти:</label>
+                <input id="request-delivery" type="text" placeholder="В свободной форме">    
+
+                <p> <!--ПОПАП-->
+                    Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.
                 </p>
-                <p>
-                    <label for="email-delivery">Ваш e-mail:</label>
-                    <input id="email-delivery" type="email" placeholder="Введите e-mail">
-                    <img src="img/form-email-delivery.png" alt="имя" width="15" height="12">
-                </p>
-                <p>
-                    <label for="request-delivery">Что нужно привезти:</label>
-                    <input id="request-delivery" type="text" placeholder="В свободной форме">
-                </p>
-                <p> <!--Нужен ли label? Как правильно оформить попап?-->
-                    <label for="quantity-delivery">Количество:</label>
-                    <img src="img/info-quantity.png" alt="информация" width="26" height="26">
-                    <p> <!--ПОПАП-->
-                        Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.
-                    </p>
-                    <br>
-                    <button type="button">-</button>
-                    <input id="quantity-delivery" type="text" placeholder="1">
-                    <button type="button">+</button>
-                </p>
+                
+                <label for="quantity-delivery">Количество:</label>
+                <button type="button">-</button>
+                <input id="quantity-delivery" type="text" placeholder="1">
+                <button type="button">+</button>
+
                 <button type="submit">Отправить</button>
             </form>
             <button>Закрыть</button>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="ru">
     <head>
-
+        <meta charset="utf-8">
+        <title> Device - Каталог</title>
     </head>
 
     <body>
@@ -16,10 +17,9 @@
                 <button type="submit">Найти</button>
             </form>
             <a href="#">Войти</a>
-            <a href="#">Выйти</a>
             <a href="#">Сравнить</a>
-            <button type="button">Корзина</button>
-            <div calss="pop-up-bascet">
+            <a href="#">Корзина</a>
+            <div id="pop-up-bascet">
                 <ul>
                     <li>
                         <a href="blank.html">
@@ -36,43 +36,35 @@
                         <button type="button">Удалить из корзины</button>
                     </li>
                 </ul>
-                <dl>
-                    <dt>Товаров:</dt>
-                    <dd>2</dd>
-    
-                    <dt>Сумма:</dt>
-                    <dd>2000 ₽</dd>
-                </dl>
-                <a href="blank.html">
-                    Открыть корзину
-                </a>
+
+                <p>Товаров: 2</p>
+                <p>Сумма: 2000 ₽</p>
+
+                <a href="blank.html">Открыть корзину</a>
             </div>
             
-            <button type="button">
-                Каталог товаров<img src="img/catalog-on.png" alt="Открыть каталог" width="50" height="50">
-            </button>
-            <div> <!--раскрывающееся меню-->
-                <p>
+            <button type="button">Каталог товаров</button>
+            <ul> <!--раскрывающееся меню. В виде списка списков, удобно для стилизации, семантически правильно. ОК-->
+                <li>
                     <ul>
                         <li><a href="blanc.html">Виртуальная реальность</a></li>
                         <li><a href="blanc.html">Моноподы для cелфи</a></li>
-                        <li><a href="blanc.html">Экшн-камеры
-                        </a></li>
+                        <li><a href="blanc.html">Экшн-камеры</a></li>
                     </ul>
-                </p>
-                <p>
+                </li>
+                <li>    
                     <ul>
                         <li><a href="blanc.html">Фитнес-браслеты</a></li>
                         <li><a href="blanc.html">Умные часы</a></li>
                     </ul>
-                </p>
-                <p>
+                </li>
+                <li>
                     <ul>
                         <li><a href="blanc.html">Квадрокоптеры</a></li>
                     </ul>
-                </p>
-            </div>
-    
+                </li>
+            </ul>
+
             <nav>
                 <ul>
                     <li><a href="blanc.html">Доставка</a></li>
@@ -86,10 +78,10 @@
         <main>
 
             <h1>Моноподы для селфи</h1>
-            <ul>
+            <ul> <!--Хлебные крошки-->
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="index.html">Каталог товаров</a></li>
-                <li>Моноподы для селфи</li>
+                <li>Моноподы для селфи</li> <!--Активная вкладка-->
             </ul>
 
             <section> <!--фильтр-->
@@ -143,61 +135,47 @@
                 </form>
             </section>
 
-           
-
             <section> <!--страница каталога-->
 
-                <div> <!--Может тут должна быть форма, т.к. мы отправляем данные о сортировке. Надо уточнить-->
-                    <h2>сортировка:</h2>
-                    <button type="button">Популярные</button>
-                    <button type="button"><img src="img/change-filter.png" alt="сортировка" width="30" height="30"></button>
-                    <button type="button"><img src="img/sort-item-up.png" alt="сортировка" width="30" height="30"></button>
-                    <button type="button"><img src="img/sort-item-down.png" alt="сортировка" width="30" height="30"></button>
-                </div>
+                <!--Может тут должна быть форма, т.к. мы отправляем данные о сортировке. Надо уточнить-->
+                <h2>сортировка:</h2>
+                <button type="button">Популярные</button>
+                <button type="button">раскрытие списка сортировок</button>
+                <button type="button">по возрастанию</button>
+                <button type="button">по убыванию</button>
+
 
                 <ul>
                     <li>
                         <a href="#"><img src="img/catalog-product-1.png" alt="Любительская
                         селфи-палка" width="360" height="380">
-                            <img src="img/new-mark.png" alt="новинка" width="60" height="60">
-                            <dl>
-                                <dt>Любительская<br>селфи-палка</dt>
-                                <dd>500 ₽</dd>
-                            </dl>
+                            <h3>Любительская<br>селфи-палка</h3>
+                            <p>500 ₽</p>
                         </a>
                     </li>
                     <li>
                         <a href="#"><img src="img/catalog-product-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
-                            <img src="img/new-mark.png" alt="новинка" width="60" height="60">
-                            <dl>
-                                <dt>Профессиональная<br>селфи-палка</dt>
-                                <dd>1 500 ₽</dd>
-                            </dl>
+                            <h3>Профессиональная<br>селфи-палка</h3>
+                            <p>1 500 ₽</p>
                         </a>
                     </li>
                     <li>
                         <a href="#"><img src="img/catalog-product-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
-                            <img src="img/new-mark.png" alt="новинка" width="60" height="60">
-                            <dl>
-                                <dt>Непотопляемая<br>селфи-палка</dt>
-                                <dd>2 500 ₽</dd>
-                            </dl>
+                            <h3>Непотопляемая<br>селфи-палка</h3>
+                            <p>2 500 ₽</p>
                         </a>
                     </li>
                     <li>
                         <a href="#"><img src="img/catalog-product-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
-                            <img src="img/new-mark.png" alt="новинка" width="60" height="60">
-                            <dl>
-                                <dt>Селфи-палка «Следуй за<br>мной»</dt>
-                                <dd>1 500 ₽</dd>
-                            </dl>
+                            <h3>Селфи-палка «Следуй за<br>мной»</h3>
+                            <p>1 500 ₽</p>
                         </a>
                     </li>
                 </ul>
                 
                 <button type="button">Загрузить ещё</button>
 
-                <div> <!--навигация по каталогу-->
+                <div> <!--навигация по каталогу, обернул сразу в div,  хотя на данном этапе можно без этого-->
                     <button type="button">назад</button>
                     <ul>
                         <li>
@@ -226,13 +204,14 @@
 
         <footer>
             <section>
-                <a href="index.html"><img src="img/logo-footer.png" alt="логотип" width="144.9" height="36"></a>
+                <h2>Как нас найти?</h2>
+                <a href="index.html"><img src="img/logo-footer.png" alt="логотип" width="144,9" height="36"></a>
                 <p>Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
                 </p>
-                <img src="img/line-footer.png" alt="футер" width="80" height="7">
             </section>
     
             <section>
+                <h2>сервисы и соцсети</h2>
                 <ul>
                     <li>
                         <a href="#">Доставка</a>
@@ -258,6 +237,7 @@
             </section>
     
             <section>
+                <h2>Как с нами связаться</h2>
                 <p><a href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
                 </p>
                 <a href="#"><img src="img/logo-developer.png" alt="разработчик" width="115" height="33"></a>
@@ -265,7 +245,6 @@
         </footer>
 
     </body>
-
 
     
 </html>
