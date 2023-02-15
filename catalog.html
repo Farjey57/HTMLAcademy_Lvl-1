@@ -4,13 +4,18 @@
     <head>
         <meta charset="utf-8">
         <title> Device - Каталог</title>
+
+        <link rel="icon" href="favicon.ico" sizes="any">
+        <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-opt.png">
+        <link rel="manifest" href="manifest.webmanifest">
     </head>
 
     <body>
 
         <header>
             <a href="index.html">
-                <img src="img/logo.svg" alt="Логотип магазина" width="145" height="36">
+                <img src="img/icons/logo-header.svg" alt="Логотип магазина Device - Магазин гаджетов" width="145" height="36">
             </a>
             <form action="#" method="get">
                 <input type="text" placeholder="Текст поиска">
@@ -18,29 +23,29 @@
             </form>
             <a href="#">Войти</a>
             <a href="#">Сравнить</a>
-            <a href="#">Корзина</a>
+            <a href="#">Корзина</a> <!--заменил так как это скорее ссылка, чем кнопка открытия поповера. Поповер по ховеру-->
             <div id="pop-up-bascet">
                 <ul>
                     <li>
                         <a href="blank.html">
-                            <img src="img/product-1-small-5.svg" alt="Любительская селфи-палка" width="39" height="43">
+                            <img src="img/product-1-small 5.png" alt="Любительская селфи-палка" width="39" height="43">
                             Любительская селфи-палка
                         </a>
                         <button type="button">Удалить из корзины</button>
                     </li>
                     <li>
                         <a href="blank.html">
-                            <img src="img/product-2-small-5.png" alt="Профессиональная селфи-палка" width="39" height="43">
+                            <img src="img/product-2-small 5.png" alt="Профессиональная селфи-палка" width="39" height="43">
                             Профессиональная селфи-палка
                         </a>
                         <button type="button">Удалить из корзины</button>
                     </li>
                 </ul>
-
-                <p>Товаров: 2</p>
+                <p>Товаров: 2</p> <!--из dl-dt-dd передалли в два p, т.к. 1. это проще стилизовать и размещать; 2. dl-dt-dd в основном для задания свойств, характеристик-->
                 <p>Сумма: 2000 ₽</p>
-
-                <a href="blank.html">Открыть корзину</a>
+                <a href="blank.html">
+                    Открыть корзину
+                </a>
             </div>
             
             <button type="button">Каталог товаров</button>
@@ -64,7 +69,7 @@
                     </ul>
                 </li>
             </ul>
-
+    
             <nav>
                 <ul>
                     <li><a href="blanc.html">Доставка</a></li>
@@ -205,7 +210,7 @@
         <footer>
             <section>
                 <h2>Как нас найти?</h2>
-                <a href="index.html"><img src="img/logo-footer.png" alt="логотип" width="144,9" height="36"></a>
+                <a href="index.html"><img src="img/icons/logo-footer.svg" alt="Логотип магазина Device - Магазин гаджетов" width="144,9" height="36"></a>
                 <p>Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
                 </p>
             </section>
@@ -240,7 +245,7 @@
                 <h2>Как с нами связаться</h2>
                 <p><a href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
                 </p>
-                <a href="#"><img src="img/logo-developer.png" alt="разработчик" width="115" height="33"></a>
+                <a href="#"><img src="img/icons/logo-dev.svg" alt="разработчик" width="115" height="33"></a>
             </section>
         </footer>
 

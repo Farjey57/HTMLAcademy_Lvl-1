@@ -4,12 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title> Device - Магазин гаджетов </title>
-</head>
+
+    <link rel="icon" href="favicon.ico" sizes="any"> <!--32х32, выбрана конвертация png to ico, т.к. меньше по размеру в 10 раз!! size='any' для того, чтобы использовался только для тех браузеров, которые не поддерживают другие иконки-->
+    <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml"> <!--svg ресайзится сам. Удобен, но не везде поддерживается.-->
+    <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-opt.png"> <!--Для айфонов 180х180 PNG-->
+    <link rel="manifest" href="manifest.webmanifest"> <!--Для андроидов 192х192 и 512х512 PNG-->
 
 <body>
     <header>
         <a href="index.html">
-            <img src="img/logo.svg" alt="Логотип магазина" width="145" height="36">
+            <img src="img/icons/logo-header.svg" alt="Логотип магазина Device - Магазин гаджетов" width="145" height="36">
         </a>
         <form action="#" method="get">
             <input type="text" placeholder="Текст поиска">
@@ -22,14 +26,14 @@
             <ul>
                 <li>
                     <a href="blank.html">
-                        <img src="img/product-1-small-5.svg" alt="Любительская селфи-палка" width="39" height="43">
+                        <img src="img/product-1-small 5.png" alt="Любительская селфи-палка" width="39" height="43">
                         Любительская селфи-палка
                     </a>
                     <button type="button">Удалить из корзины</button>
                 </li>
                 <li>
                     <a href="blank.html">
-                        <img src="img/product-2-small-5.png" alt="Профессиональная селфи-палка" width="39" height="43">
+                        <img src="img/product-2-small 5.png" alt="Профессиональная селфи-палка" width="39" height="43">
                         Профессиональная селфи-палка
                     </a>
                     <button type="button">Удалить из корзины</button>
@@ -90,7 +94,7 @@
                 <p>01</p>
                 <button type="button">Влево</button> <!--названия не будет-->
                 <figure> <!--помещаем картинку для выделения демонстрационного материала-->
-                    <a href=""><img src="img/slider-1.png" alt="квадрокоптер с лазером" width="560" height="560"></a>
+                    <a href=""><img src="img/slider-1.png" alt="четырёхлопостной квадрокоптер с лазером" width="560" height="560"></a>
                 </figure>
                 <button type="button">Вправо</button>
                 
@@ -118,7 +122,7 @@
 
                 <button type="button">Влево</button>
                 <figure>
-                    <a href=""><img src="img/slider-2.png" alt="Фитнес-браслет" width="560" height="560"></a>
+                    <a href=""><img src="img/slider-2.png" alt="Мотивирующие фитнес-браслеты" width="560" height="560"></a>
                 </figure>
                 <button type="button">Вправо</button>
     
@@ -144,7 +148,7 @@
 
                 <button type="button">Влево</button>
                 <figure>
-                    <a href=""><img src="img/slider-3.png" alt="Селфи-палка" width="560" height="560"></a>
+                    <a href=""><img src="img/slider-3.png" alt="Самая длинная палка для селфи" width="560" height="560"></a>
                 </figure>
                 <button type="button">Вправо</button>
     
@@ -284,7 +288,7 @@
     <footer>
         <section>
             <h2>Как нас найти?</h2>
-            <a href="index.html"><img src="img/logo-footer.png" alt="логотип" width="144,9" height="36"></a>
+            <a href="index.html"><img src="img/icons/logo-footer.svg" alt="Логотип магазина Device - Магазин гаджетов" width="144,9" height="36"></a>
             <p>Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
             </p>
         </section>
@@ -319,7 +323,7 @@
             <h2>Как с нами связаться</h2>
             <p><a href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
             </p>
-            <a href="#"><img src="img/logo-developer.png" alt="разработчик" width="115" height="33"></a>
+            <a href="#"><img src="img/icons/logo-dev.svg" alt="разработчик" width="115" height="33"></a>
         </section>
     </footer>
 
