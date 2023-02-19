@@ -49,7 +49,7 @@
             </div>
             
             <button type="button">Каталог товаров</button>
-            <ul> <!--раскрывающееся меню. В виде списка списков, удобно для стилизации, семантически правильно. ОК-->
+            <ul>
                 <li>
                     <ul>
                         <li><a href="blanc.html">Виртуальная реальность</a></li>
@@ -89,120 +89,121 @@
                 <li>Моноподы для селфи</li> <!--Активная вкладка-->
             </ul>
 
-            <section> <!--фильтр. Необходимо в олну секцию всю страницу-->
-                <h2>фильтр:</h2>
-                <form action="#" method="get">
-                    <fieldset>
-                        <legend>Стоимость</legend>
-                        <input type="range">
-                        <input type="text" placeholder="От 0">
-                        <input type="text" placeholder="До 5000">
-                    </fieldset>
-                    <fieldset>   
-                        <legend>Цвет</legend>
-                        <ul>
-                            <li>
-                                <input type="checkbox" name="black" id="filter-black" checked>
-                                <label for="filter-black">Черный</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="white" id="filter-white" checked>
-                                <label for="filter-white">Белый</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="blue" id="filter-blue">
-                                <label for="filter-blue">Синий</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="red" id="filter-red">
-                                <label for="filter-red">Красный</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="pink" id="filter-pink">
-                                <label for="filter-pink">Розовый</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Bluetooth</legend>
-                        <ul>
-                            <li>
-                                <input type="radio" name="Bluetooth" value="true" id="filter-bluetooth-yes" checked>
-                                <label for="filter-bluetooth-yes">Есть</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="Bluetooth" value="false" id="filter-bluetooth-no">
-                                <label for="filter-bluetooth-no">Нет</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <button type="submit">Показать</button>
-                </form>
-            </section>
-
-            <section> <!--страница каталога-->
-
-                <!--Может тут должна быть форма, т.к. мы отправляем данные о сортировке. Надо уточнить-->
-                <h2>сортировка:</h2>
-                <button type="button">Популярные</button> <!--В обертку со ссписком всех вариантов, без кнопок-->
-                <button type="button">раскрытие списка сортировок</button>
-                <button type="button">по возрастанию</button>
-                <button type="button">по убыванию</button>
-
-
-                <ul>
-                    <li>
-                        <a href="#"><img src="img/catalog-product-1.png" alt="Любительская
-                        селфи-палка" width="360" height="380">
-                            <h3>Любительская<br>селфи-палка</h3>
-                            <p>500 ₽</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="img/catalog-product-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
-                            <h3>Профессиональная<br>селфи-палка</h3>
-                            <p>1 500 ₽</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="img/catalog-product-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
-                            <h3>Непотопляемая<br>селфи-палка</h3>
-                            <p>2 500 ₽</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="img/catalog-product-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
-                            <h3>Селфи-палка «Следуй за<br>мной»</h3>
-                            <p>1 500 ₽</p>
-                        </a>
-                    </li>
-                </ul>
-                
-                <button type="button">Загрузить ещё</button>
-
-                <div> <!--навигация по каталогу, обернул сразу в div,  хотя на данном этапе можно без этого-->
-                    <button type="button">назад</button>
+            <section>
+                <section> <!--фильтр. Необходимо в олну секцию всю страницу-->
+                    <h2>фильтр:</h2>
+                    <form action="#" method="get">
+                        <fieldset>
+                            <legend>Стоимость</legend>
+                            <input type="range">
+                            <input type="text" placeholder="От 0">
+                            <input type="text" placeholder="До 5000">
+                        </fieldset>
+                        <fieldset>   
+                            <legend>Цвет</legend>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="black" id="filter-black" checked>
+                                    <label for="filter-black">Черный</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="white" id="filter-white" checked>
+                                    <label for="filter-white">Белый</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="blue" id="filter-blue">
+                                    <label for="filter-blue">Синий</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="red" id="filter-red">
+                                    <label for="filter-red">Красный</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="pink" id="filter-pink">
+                                    <label for="filter-pink">Розовый</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Bluetooth</legend>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="Bluetooth" value="true" id="filter-bluetooth-yes" checked>
+                                    <label for="filter-bluetooth-yes">Есть</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="Bluetooth" value="false" id="filter-bluetooth-no">
+                                    <label for="filter-bluetooth-no">Нет</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <button type="submit">Показать</button>
+                    </form>
+                </section>
+    
+                <section> <!--страница каталога-->
+    
+                    <!--Может тут должна быть форма, т.к. мы отправляем данные о сортировке. Надо уточнить-->
+                    <h2>сортировка:</h2>
+                    <button type="button">Популярные</button> <!--В обертку со ссписком всех вариантов, без кнопок-->
+                    <button type="button">по возрастанию</button>
+                    <button type="button">по убыванию</button>
+    
+    
                     <ul>
                         <li>
-                            <a href="#">1</a>
+                            <a href="#"><img src="img/catalog-product-1.png" alt="Любительская
+                            селфи-палка" width="360" height="380">
+                                <h3>Любительская<br>селфи-палка</h3>
+                                <p>500 ₽</p>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">2</a>
+                            <a href="#"><img src="img/catalog-product-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
+                                <h3>Профессиональная<br>селфи-палка</h3>
+                                <p>1 500 ₽</p>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">3</a>
+                            <a href="#"><img src="img/catalog-product-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
+                                <h3>Непотопляемая<br>селфи-палка</h3>
+                                <p>2 500 ₽</p>
+                            </a>
                         </li>
                         <li>
-                            ...
-                        </li>
-                        <li>
-                            <a href="#">15</a>
+                            <a href="#"><img src="img/catalog-product-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+                                <h3>Селфи-палка «Следуй за<br>мной»</h3>
+                                <p>1 500 ₽</p>
+                            </a>
                         </li>
                     </ul>
-                    <button type="button">вперёд</button>
-                </div>
-
+                    
+                    <button type="button">Загрузить ещё</button>
+    
+                    <div> <!--навигация по каталогу, обернул сразу в div,  хотя на данном этапе можно без этого-->
+                        <button type="button">назад</button>
+                        <ul>
+                            <li>
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                ...
+                            </li>
+                            <li>
+                                <a href="#">15</a>
+                            </li>
+                        </ul>
+                        <button type="button">вперёд</button>
+                    </div>
+                </section>
             </section>
+            
 
         </main>
 
