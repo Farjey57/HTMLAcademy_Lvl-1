@@ -1,0 +1,78 @@
+/* Fonts */
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('Raleway-ExtraBold.woff2') format('woff2'),
+         url('Raleway-ExtraBold.woff') format('woff'),
+         url('Raleway-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: local('Rubik'),
+         local('Rubik-Regular'), 
+         url('Rubik.woff2') format('woff2'), 
+         url('Rubik.woff') format('woff'), 
+         url('Rubik.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: local('Rubik Bold'), 
+         local('Rubik-Bold'), 
+         url('Rubikbold.woff2') format('woff2'), 
+         url('Rubikbold.woff') format('woff'), 
+         url('Rubikbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Variables*/
+
+:root {
+    --basic-black: #000;
+    --special-yellow-light: #FFE17F;
+    --special-yellow-dark: #FFC700;
+    --basic-light: #F0F0F0;
+    --basic-light-gray: #EBEBEB;
+    --basic-white: #FFF;
+    --status-success: #08AF00;
+    --basic-dark: #444444;
+
+    --click-yellow: #FFCC33;
+    --focus-purple: #AF4FFF;
+    --special-button-grey: #E5E5E5;
+
+    --special-form-background: #C4C4C4;
+    --special-form-borders: #CECECE;
+    --element-form: #CCCCCC;
+    --icon-form: #B3B3B3;
+    --form-basic-gray: #DCDCDC;
+    --status-error: #FF3D3D;
+
+    --cart-dark: #1A1A1A;
+
+    --itme-catalog-black: #363636;
+}
+
+/* Global */
+
+
+
+h2 {
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+
+.content-hidden {
+    color: transparent;
+    font-size: 0;
+}
+
