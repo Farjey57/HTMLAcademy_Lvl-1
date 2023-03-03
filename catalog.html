@@ -82,126 +82,139 @@
         </header>
 
 
-        <main>
+        <main class="container">
 
-            <h1>Моноподы для селфи</h1>
-            <ul> <!--Хлебные крошки-->
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="index.html">Каталог товаров</a></li>
-                <li>Моноподы для селфи</li> <!--Активная вкладка-->
+            <h1 class="title">Моноподы для селфи</h1>
+            <ul class="breadcrumbs"> <!--Хлебные крошки-->
+                <li class="breadcrumbs__item">
+                    <a href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="index.html">Каталог товаров</a>
+                </li>
+                <li class="breadcrumbs__item breadcrumbs__item--active">
+                    Моноподы для селфи
+                </li> <!--Активная вкладка-->
             </ul>
 
-            <section>
-                <section> <!--фильтр. Необходимо в олну секцию всю страницу-->
-                    <h2>фильтр:</h2>
-                    <form action="#" method="get">
-                        <fieldset>
-                            <legend>Стоимость</legend>
-                            <input type="range">
-                            <input type="text" placeholder="От 0">
-                            <input type="text" placeholder="До 5000">
+            <section class="catalog">
+                <section class="filter">
+                    <h2 class="title--catalog">фильтр:</h2>
+                    <form class="filter__form" action="#" method="get">
+                        <fieldset class="filter__fieldset"> 
+                            <legend class="">Стоимость</legend><!--Из транспортных компаний-->
+                            <input class="filter__input filter__input--range" type="range">
+                            <input class="filter__input filter__input--text" type="text" placeholder="От 0">
+                            <input class="filter__input filter__input--text" type="text" placeholder="До 5000">
                         </fieldset>
-                        <fieldset>   
+                        <fieldset class="filter__fieldset">   
                             <legend>Цвет</legend>
-                            <ul>
-                                <li>
-                                    <input type="checkbox" name="black" id="filter-black" checked>
-                                    <label for="filter-black">Черный</label>
+                            <ul class="filter__fieldset-list">
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--checkbox filter__input--checkbox_active" type="checkbox" name="black" id="filter-black" checked>
+                                    <label class="filter__label" for="filter-black">Черный</label>
                                 </li>
-                                <li>
-                                    <input type="checkbox" name="white" id="filter-white" checked>
-                                    <label for="filter-white">Белый</label>
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--checkbox filter__input--checkbox_active" type="checkbox" name="white" id="filter-white" checked>
+                                    <label class="filter__label" for="filter-white">Белый</label>
                                 </li>
-                                <li>
-                                    <input type="checkbox" name="blue" id="filter-blue">
-                                    <label for="filter-blue">Синий</label>
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--checkbox" type="checkbox" name="blue" id="filter-blue">
+                                    <label class="filter__label" for="filter-blue">Синий</label>
                                 </li>
-                                <li>
-                                    <input type="checkbox" name="red" id="filter-red">
-                                    <label for="filter-red">Красный</label>
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--checkbox" type="checkbox" name="red" id="filter-red">
+                                    <label class="filter__label" for="filter-red">Красный</label>
                                 </li>
-                                <li>
-                                    <input type="checkbox" name="pink" id="filter-pink">
-                                    <label for="filter-pink">Розовый</label>
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--checkbox" type="checkbox" name="pink" id="filter-pink">
+                                    <label class="filter__label" for="filter-pink">Розовый</label>
                                 </li>
                             </ul>
                         </fieldset>
-                        <fieldset>
+                        <fieldset class="filter__fieldset">
                             <legend>Bluetooth</legend>
-                            <ul>
-                                <li>
-                                    <input type="radio" name="Bluetooth" value="true" id="filter-bluetooth-yes" checked>
-                                    <label for="filter-bluetooth-yes">Есть</label>
+                            <ul class="filter__fieldset-list">
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--radio filter__input--radio_active" type="radio" name="Bluetooth" value="true" id="filter-bluetooth-yes" checked>
+                                    <label class="filter__label" for="filter-bluetooth-yes">Есть</label>
                                 </li>
-                                <li>
-                                    <input type="radio" name="Bluetooth" value="false" id="filter-bluetooth-no">
-                                    <label for="filter-bluetooth-no">Нет</label>
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--radio" type="radio" name="Bluetooth" value="false" id="filter-bluetooth-no">
+                                    <label class="filter__label" for="filter-bluetooth-no">Нет</label>
                                 </li>
                             </ul>
                         </fieldset>
-                        <button type="submit">Показать</button>
+                        <button class="button button--special" type="submit">Показать</button>
                     </form>
                 </section>
     
-                <section> <!--страница каталога-->
+                <section class="catalog__show"> <!--страница каталога-->
     
                     <!--Может тут должна быть форма, т.к. мы отправляем данные о сортировке. Надо уточнить-->
-                    <h2>сортировка:</h2>
-                    <button type="button">Популярные</button> <!--В обертку со ссписком всех вариантов, без кнопок-->
-                    <button type="button">по возрастанию</button>
-                    <button type="button">по убыванию</button>
+                    <h2 class="title--catalog">Cортировка:</h2>
+                    <ul class="sort">
+                        <li class="sort__item sort__item--active">Популярные</li>
+                        <li class="sort__item">Наличие</li>
+                        <li class="sort__item">Цена</li>
+                    </ul>
+                    <button class="sort__button--up" type="button">по возрастанию</button>
+                    <button class="sort__button--down" type="button">по убыванию</button>
     
     
-                    <ul>
-                        <li>
-                            <a href="#"><img src="img/catalog-product-1.png" alt="Любительская
-                            селфи-палка" width="360" height="380">
-                                <h3>Любительская<br>селфи-палка</h3>
-                                <p>500 ₽</p>
+                    <ul class="catalog__list">
+                        <li class="catalog__item">
+                            <a class="catalog__link" href="#">
+                                <img class="catalog__img" src="img/catalog-product-1.png" alt="Любительская селфи-палка" width="360" height="380">
+                                <h3>Любительская<br>селфи-палка</h3> <!--Тоже что и в legend-->
+                                <p class="text--price">500 ₽</p> 
                             </a>
                         </li>
-                        <li>
-                            <a href="#"><img src="img/catalog-product-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
+                        <li class="catalog__item">
+                            <a class="catalog__link" href="#">
+                                <img class="catalog__img" src="img/catalog-product-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
                                 <h3>Профессиональная<br>селфи-палка</h3>
-                                <p>1 500 ₽</p>
+                                <p class="text--price">1 500 ₽</p>
                             </a>
                         </li>
-                        <li>
-                            <a href="#"><img src="img/catalog-product-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
+                        <li class="catalog__item">
+                            <a class="catalog__link" href="#">
+                                <img class="catalog__img" src="img/catalog-product-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
                                 <h3>Непотопляемая<br>селфи-палка</h3>
-                                <p>2 500 ₽</p>
+                                <p class="text--price">2 500 ₽</p>
                             </a>
                         </li>
-                        <li>
-                            <a href="#"><img src="img/catalog-product-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+                        <li class="catalog__item">
+                            <a class="catalog__link" href="#">
+                                <img class="catalog__img" src="img/catalog-product-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
                                 <h3>Селфи-палка «Следуй за<br>мной»</h3>
-                                <p>1 500 ₽</p>
+                                <p class="text--price">1 500 ₽</p>
                             </a>
                         </li>
                     </ul>
                     
-                    <button type="button">Загрузить ещё</button>
+                    <button class="title--catalog catalog__button" type="button">Загрузить ещё</button>
     
-                    <div> <!--навигация по каталогу, обернул сразу в div,  хотя на данном этапе можно без этого-->
-                        <button type="button">назад</button>
-                        <ul>
-                            <li>
+                    <div class="catalog-nav"> <!--навигация по каталогу, обернул сразу в div,  хотя на данном этапе можно без этого-->
+                        <button class="button catalog-nav__button catalog-nav__button--disabled" type="button">назад</button>
+                        <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
                                 <a href="#">1</a>
                             </li>
-                            <li>
-                                <a href="#">2</a>
+                            <li class="catalog-nav__item">
+                                <a class="catalog-nav__link" href="#">2</a>
                             </li>
-                            <li>
-                                <a href="#">3</a>
+                            <li class="catalog-nav__item">
+                                <a class="catalog-nav__link" href="#">3</a>
                             </li>
-                            <li>
+                            <li class="catalog-nav__item">
                                 ...
                             </li>
-                            <li>
-                                <a href="#">15</a>
+                            <li class="catalog-nav__item">
+                                <a class="catalog-nav__link" href="#">15</a>
                             </li>
                         </ul>
-                        <button type="button">вперёд</button>
+                        <button class="title--catalog catalog__button" type="button">вперёд</button>
                     </div>
                 </section>
             </section>
