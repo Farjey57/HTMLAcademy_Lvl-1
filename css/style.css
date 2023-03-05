@@ -70,6 +70,10 @@
     --font-category: 800 18px/24px "Raleway", Arial, sans-serif;
     --font-delivery: 800 20px/23px "Raleway", Arial, sans-serif;
     --font-label: 700 18px/20px "Rubik", Arial, sans-serif;
+    --font-catalog-title: 800 16px/19px "Raleway", Arial, sans-serif;
+    --font-filter-input: 400 15px/18px "Rubik", Arial, sans-serif;
+    --font-point-catalog: 400 16px/19px "Rubik", Arial, sans-serif;
+    --font-catalog-price: 400 18px/21px "Rubik", Arial, sans-serif;
 
 
     --special: linear-gradient(yellow, yellow);
@@ -157,6 +161,18 @@ button {
 .text--popup {
     font: var(--font-small);
     color: var(--basic-white);
+}
+
+.text--catalog-title {
+    font: var(--font-catalog-title);
+    color: var(--basic-black);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.text--point {
+    font: var(--font-point-catalog);
+    color: var(--basic-black);
 }
 
 /* Focus*/
@@ -693,4 +709,139 @@ button {
 }
 
 
- 
+/* Page 2. Catalog*/
+
+/* Breadcrumbs */
+
+.breadcrumbs__item {
+    color: var(--basic-black);
+}
+
+.breadcrumbs__item::after {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 7px;
+    background: url('../img/icons/breadcrumbs-arrow.svg') center no-repeat;
+    opacity: 0.2;
+}
+
+.breadcrumbs__item--active::after {
+    display: none;
+}
+
+.catalog {
+    background-color: var(--basic-light);
+}
+
+/* Filter */
+
+.filter__fieldset {
+    border: none;
+}
+
+.filter__legend::before {
+    content: '';
+    border: 2px solid var(--basic-black);
+    display: block;
+    width: 200px;
+    height: 0px;
+}
+
+.filter__input {
+    border: none;
+    background: inherit;
+    font: var(--font-filter-input);
+}
+
+.filter__input::placeholder {
+    font: var(--font-filter-input);
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+
+.filter__input--checkbox {    
+    appearance: none;
+    background: inherit;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 2px solid var(--element-form);
+}
+
+.filter__input--checkbox:checked {    
+    background: url('../img/icons/checkbox.svg') center no-repeat;
+    border: 2px solid #000000;
+}
+
+.filter__fieldset-item:hover {
+    opacity: 0.6;
+}
+
+.filter__fieldset-item:active {
+    opacity: 0.3;
+}
+
+/* Sort */
+
+.sort__item {
+    color: var(--basic-black);
+}
+
+.sort__button {
+    background: url('../img/icons/sort-type.svg') center no-repeat;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.sort__button--up {
+    background: url('../img/icons/sort-item.svg') center no-repeat;
+    opacity: 0.2;
+}
+
+.sort__button--down {
+    background: url('../img/icons/sort-item-down.svg') center no-repeat;
+    opacity: 0.2;
+}
+
+/* Catalog Show */
+
+.catalog__wrap {
+    background-color: var(--basic-white);
+    width: 840px;
+}
+
+.catalog__text {
+    font: var(--font-catalog-price);
+    color: var(--basic-dark);
+}
+
+/* Catalog Nav */
+
+.catalog-nav {
+    background-color: var(--basic-light);
+    width: 760px;
+    display: flex;
+}
+
+.catalog__button {
+    border: 3px solid var(--special-button-grey);
+    background: inherit;
+    width: 760px;
+    height: 55px;
+}
+
+.catalog-nav__link { 
+    color: var(--basic-dark);  
+    opacity: 0.3;
+}
+
+.catalog-nav__item--ellipsis {
+    opacity: 0.3;
+}
+
+.catalog-nav__link:hover {
+    opacity: 1;
+}
