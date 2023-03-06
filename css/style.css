@@ -783,6 +783,47 @@ button {
     opacity: 0.3;
 }
 
+/* Radio box  через скрытие элемента и создание отдельного бокса через before*/
+
+.filter__radiobox {
+    position: relative;
+    padding-left: 30px;
+    user-select: none;
+}
+
+.filter__input--radio{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.filter__radiobox::before {
+    content: '';
+    position: absolute;
+    margin-left: -1.9em;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../img/icons/radio-elips2.svg') center no-repeat;
+    
+}
+
+.filter__input--radio:focus + .filter__radiobox::before {
+    outline: var(--focus-purple) solid 2px;
+    outline-offset: 2px;
+}
+
+.filter__input--radio:checked + .filter__radiobox::before {
+    background: url('../img/icons/radio-elips2.svg') center no-repeat,
+                url('../img/icons/radio-elips.svg') center no-repeat;
+}
+
+.filter__radio li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
 /* Sort */
 
 .sort__item {
