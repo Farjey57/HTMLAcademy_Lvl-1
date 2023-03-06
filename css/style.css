@@ -820,7 +820,7 @@ button {
 
 /* Catalog Nav */
 
-.catalog-nav {
+.catalog__nav {
     background-color: var(--basic-light);
     width: 760px;
     display: flex;
@@ -833,15 +833,15 @@ button {
     height: 55px;
 }
 
-.catalog-nav__link { 
+.catalog__nav-link { 
     color: var(--basic-dark);  
     opacity: 0.3;
 }
 
-.catalog-nav__item--ellipsis {
+.catalog__nav-item--ellipsis {
     opacity: 0.3;
 }
 
-.catalog-nav__link:hover {
+.catalog__nav-link:hover {
     opacity: 1;
 }
