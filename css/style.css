@@ -810,6 +810,10 @@ button {
     
 }
 
+
+
+
+
 .filter__input--radio:focus + .filter__radiobox::before {
     outline: var(--focus-purple) solid 2px;
     outline-offset: 2px;
