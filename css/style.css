@@ -74,6 +74,7 @@
     --font-filter-input: 400 15px/18px "Rubik", Arial, sans-serif;
     --font-point-catalog: 400 16px/19px "Rubik", Arial, sans-serif;
     --font-catalog-price: 400 18px/21px "Rubik", Arial, sans-serif;
+    --font-counter: 400 14px/17px "Rubik", Arial, sans-serif;
 
 
     --special: linear-gradient(yellow, yellow);
@@ -82,7 +83,7 @@
 /* Global */
 
 body {
-    min-width: 1440px;
+    min-width: 1440px; /*Всегда 100% величина*/
     margin: 0;
     padding: 0;
     background-color: var(--basic-white);
@@ -197,27 +198,41 @@ button {
 
 .search-form::before {
     content: '';
-    display: block;
     background: url('../img/icons/search.svg');
     width: 16px;
     height: 16px;
     position: absolute;
+    left: 16px;
+    top: 12px;
 }
 
 .search-form__input, .search-form__button {
     display: block;
+    background: inherit;
 }
 
 .search-form__input {
+    width: 359px;
+    height: 40px;
     color: var(--basic-black);
     border: 2px solid var(--basic-black);
     border-radius: 50px 0px 0px 50px;
-    background: inherit;
+    box-sizing: border-box;
+    padding-left: 48px;
 }
 
 .search-form__input::placeholder {
     color: var(--basic-black);
     opacity: 0.3;
+}
+
+.search-form__button {
+    width: 160px;
+    height: 40px;
+    border: solid var(--basic-black);
+    border-width: 2px 2px 2px 0;
+    border-radius: 0px 50px 50px 0px;
+    text-align: center;
 }
 
 .search-form__button:hover {
@@ -229,35 +244,68 @@ button {
     color: var(--basic-white) 0.3;
 }
 
-.search-form__button {
-    border: solid var(--basic-black);
-    border-width: 2px 2px 2px 0;
-    border-radius: 0px 50px 50px 0px;
-    background: inherit;
-    text-align: center;
-}
-
 /* Header link */
 
-.header-link__header-login {
+.header-link__header-login::before {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 12px;
     background-image: url("../img/icons/enter.svg");
     background-repeat: no-repeat;
+    margin-right: 13px;
 }
 
 .header-link__header-compare {
+    padding-left: 22px;
     background-image: url("../img/icons/compare.svg");
     background-repeat: no-repeat;
+    background-position: left center;
 }
 
 .header-link__header-basket {
+    padding-left: 25px;
     background-image: url("../img/icons/bascet.svg");
     background-repeat: no-repeat;
+    background-position: center left;
+    position: relative;
 }
+
+.header-link__counter {
+    font: var(--font-counter);
+    width: 21px;
+    height: 21px;
+
+    background-color: var(--basic-white);
+    border-radius: 21px;
+
+    text-align: center;
+    line-height: 21px; /*По другому не получилось поставить ровно*/
+
+    position: absolute;
+    left: -15px;
+    top: 1.5px;
+}
+
+/* МНЕ НЕ НРАВИТСЯ. СДЕЛАЛ ОТДЕЛЬНЫМ БЛОКОМ header-link__counter
+.header-link__header-basket::before {
+    content:'2';
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    width: 21px;
+    height: 21px;
+    background-color: var(--basic-white);
+    border-radius: 21px;
+}
+*/
 
 /* popup */
 
 .popup-basket {
     background: var(--cart-dark);
+    position: relative;
 }
 
 .popup-basket__basket-item {
@@ -281,6 +329,18 @@ button {
     height: 10px;
 }
 
+.popup-basket::before {
+    /* треугольник для попапа */
+    content: '';
+    display: block;
+    background-image: url('../img/icons/trg.svg');
+    width: 14px;
+    height: 6px;
+    position: absolute;
+    top: -6px;
+    left: calc(50% - 7px);
+}
+
 /* Header catalog */
 
 .header-catalog__button::after {
@@ -301,6 +361,7 @@ button {
     display: flex;
 }
 
+/* box-sizing */
 .control-wrapper__control {
     display: block;
     width: 12px; 
@@ -706,6 +767,18 @@ button {
     width: 200px;
     height: 160px;
     text-align: left;
+    position: relative;
+}
+
+.quantity__popup::before { /* треугольник для попапа */
+    content: '';
+    display: block;
+    background-image: url('../img/icons/trg.svg');
+    width: 14px;
+    height: 6px;
+    position: absolute;
+    top: -6px;
+    left: 146px;
 }
 
 
@@ -809,10 +882,6 @@ button {
     background: url('../img/icons/radio-elips2.svg') center no-repeat;
     
 }
-
-
-
-
 
 .filter__input--radio:focus + .filter__radiobox::before {
     outline: var(--focus-purple) solid 2px;
