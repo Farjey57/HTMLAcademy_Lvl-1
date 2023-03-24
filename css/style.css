@@ -123,6 +123,12 @@ figure {
     height: 100%;
 }
 
+.container {
+    width: 1160px;
+    margin: 0 auto; 
+    padding: 0; 
+}
+
 .content-hidden {
     color: transparent;
     font-size: 0;
@@ -205,8 +211,7 @@ figure {
 
 .main-header {
     background-color: var(--special-yellow-light);
-    width: 1160px;
-    margin: 40px auto 0;
+    margin-top: 40px;
     padding: 0 60px;
     height: 186px;
 
@@ -424,12 +429,6 @@ figure {
 }
 
 /* main */
-
-.container {
-    width: 1160px;
-    margin: 0 auto;
-    padding: 0;   
-}
 
 .container-wrap {
     display: grid;
@@ -654,7 +653,7 @@ figure {
 }
 
 .services__wrap {
-    position: absolute;
+    position: relative;;
     top: -102px;
     display: grid;
     grid-template: auto / 280px 1fr;
@@ -817,19 +816,32 @@ figure {
 }
 
 .about__list {
-    list-style: disc inside;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 19px;
 } 
 
-.about__item::marker {
-    color: var(--special-yellow-dark);
+.about__item {
+    display: flex;
+    align-items: center;
+}
+
+.about__item::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--special-yellow-dark);
+    border-radius: 8px;
     margin-right: 26px;
 }
 
 /* Contacts */
+
+.contacts {
+    margin-left: 50px;
+}
 
 .contacts__phone {
     text-decoration: underline;
@@ -841,6 +853,9 @@ figure {
 .subscription {
     height: 421px;
     background-color: var(--basic-light);
+}
+
+.subscription__wrap {
     display: grid;
     grid-template: 1fr 1fr/1fr 1fr;
     row-gap: 144px;
@@ -862,7 +877,10 @@ figure {
 
 .subscription__form {
     display: flex;
-    
+}
+
+.subscription__form label {
+    height: min-content;
 }
 
 .subscription__input, .subscription__button {
@@ -906,14 +924,29 @@ figure {
 .main-footer {
     background-color: var(--basic-dark);
     color: var(--basic-white);
+    height: 321px;
 }
 
-.footer-find__address::after {
+.main-footer__wrap {
+    display: grid;
+    grid-template: 1fr/max-content 1fr max-content;
+}
+
+.footer-find {
+    margin-top: 62px;
+}
+
+.footer-find__address {
+    margin-top: 35px;
+}
+
+.footer-find::after {
     content: '';
     display: block;
     height: 7px;
     width: 80px;
     background-color: var(--special-yellow-dark);
+    margin-top: 64px;
 }
 
 .footer-social__button {
@@ -921,6 +954,20 @@ figure {
 }
 
 /* Social icons */
+
+.footer-social__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 35px;
+    margin-top: 137px;
+}
+
+.footer-social__icons {
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    margin-top: 62px;
+}
 
 .footer-social__facebook, .footer-social__instagram, .footer-social__twitter {
     background-color: var(--basic-white);
@@ -967,11 +1014,22 @@ figure {
     opacity: 0.3;
 }
 
-/*  */
+/* footer contacts  */
+
+.footer-social__contacts {
+    flex-direction: column;
+    display: flex;
+    margin-top: 140px;
+}
 
 .footer-social__phone {
     color: inherit;
     text-decoration: underline;
+}
+
+.footer-social__copyright {
+    margin-top: 63px;
+    text-align: end;
 }
 
 /* Modal Delivery */

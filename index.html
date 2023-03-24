@@ -16,7 +16,7 @@
 
 <body class="text page-body">
 
-    <header class="main-header">
+    <header class="container main-header">
 
         <a class="header-logo" href="index.html">
             <img class="header-logo__img" src="img/icons/logo-header.svg" alt="Логотип магазина Device - Магазин гаджетов" width="145" height="36">
@@ -125,11 +125,11 @@
 
     </header>
 
-    <main class="container">
+    <main>
         <h1 class="content-hidden">Магазин гаджетов Device</h1>
 
         <div class="container-wrap">
-            <section class="slider"> <!--Слайдер-->
+            <section class="slider container"> <!--Слайдер-->
                 <h2 class="content-hidden">Рекомендации</h2> <!--Как правильно скрыть?-->   
                 
                 <div class="slide-number-wrap">
@@ -262,7 +262,7 @@
             </section>
     
                 
-            <section class="main-catalog">
+            <section class="main-catalog container">
 
                 <h2 class="content-hidden">Каталог</h2>
     
@@ -309,53 +309,53 @@
 
                 <h2 class="content-hidden">Сервисы</h2>
     
-                <div class="services__wrap">
+                <div class="services__wrap container">
                     <div class="services-control">
-                    <ul class="services-control__list">
-                        <li class="services-control__item services-control__item--active">
-                            <button class="button button--special" type="button">Доставка</button>
-                        </li>
-                        <li class="services-control__item">
-                            <button class="button button--special" type="button">Гарантия</button>
-                        </li>
-                        <li class="services-control__item">
-                            <button class="button button--special" type="button">Кредит</button>
-                        </li>
-                    </ul>
-                </div>
+                        <ul class="services-control__list">
+                            <li class="services-control__item services-control__item--active">
+                                <button class="button button--special" type="button">Доставка</button>
+                            </li>
+                            <li class="services-control__item">
+                                <button class="button button--special" type="button">Гарантия</button>
+                            </li>
+                            <li class="services-control__item">
+                                <button class="button button--special" type="button">Кредит</button>
+                            </li>
+                        </ul>
+                    </div>
                 
     
-                <section class="services__item services__item--active"> <!--вкладка доставки-->
-                    <div class="services__item-wrap">
-                        <h3 class="text--title">Доставка</h3>
-    
-                        <p>Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно! Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.
+                    <section class="services__item services__item--active"> <!--вкладка доставки-->
+                        <div class="services__item-wrap">
+                            <h3 class="text--title">Доставка</h3>
+        
+                            <p>Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно! Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.
+                            </p>
+                        </div>
+                    </section>
+        
+                    <section class="services__item" hidden> <!--Вкладка Гарантия-->
+                        <h3 class="text--title">Гарантия</h3>
+        
+                        <p>Если из-за возгорания купленного у нас товара у вас<br>
+                            сгорит дом — не переживайте, мы выдадим вам новый. <br>
+                            Товар, не дом, конечно же.
                         </p>
-                    </div>
-                </section>
-    
-                <section class="services__item" hidden> <!--Вкладка Гарантия-->
-                    <h3 class="text--title">Гарантия</h3>
-    
-                    <p>Если из-за возгорания купленного у нас товара у вас<br>
-                        сгорит дом — не переживайте, мы выдадим вам новый. <br>
-                        Товар, не дом, конечно же.
-                    </p>
-                </section>
-    
-                <section class="services__item" hidden> <!--вкладка Кредит-->
-                    <h3 class="text--title">Кредит</h3>
-    
-                    <p>Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для банка, разумеется.
-                    </p>
-                </section>
+                    </section>
+        
+                    <section class="services__item" hidden> <!--вкладка Кредит-->
+                        <h3 class="text--title">Кредит</h3>
+        
+                        <p>Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для банка, разумеется.
+                        </p>
+                    </section>
 
                 </div>
                 
                 
             </section>
     
-            <div class="delivery-order">
+            <div class="delivery-order container">
                 <button class="button delivery-order__button">
                     Доставим редкий товар под заказ
                     <div class="delivery-order__icon"></div>
@@ -363,7 +363,7 @@
             </div>
     
     
-            <div class="info-wrap">
+            <div class="info-wrap container">
                 <section class="about">
                     <h2 class="about__title text--title">О нас</h2>
         
@@ -404,20 +404,23 @@
             </div>
     
             <section class="subscription">
-                <h2 class="text--title">Подпишитесь<br>на рассылку</h2>
+                <div class="subscription__wrap container">
+                    <h2 class="text--title">Подпишитесь<br>на рассылку</h2>
     
-                <p class="text">Еженедельный дайджест с обзорами новинок,<br>
-                    длительными тест-драйвами, распаковками, а также акции,<br> спецпредложения и вот это вот всё.</p>
-                
-                <div class="subscription__form-wrap">
-                    <form class="subscription__form" action="#" method="post"> <!--лэйбл должен обязательно быть до input к которому применяется? Вроде можно-->
-                        <input class="subscription__input" id="email-subscribe" type="email" placeholder="Ваш e-mail">
-                        <label for="email-subscribe"></label> 
-                        <button class="button subscription__button" type="submit">Подписаться</button>
-                    </form>
-        
-                    <p class="subscription__text">Это бесплатно</p>
+                    <p class="text">Еженедельный дайджест с обзорами новинок,<br>
+                        длительными тест-драйвами, распаковками, а также акции,<br> спецпредложения и вот это вот всё.</p>
+                    
+                    <div class="subscription__form-wrap">
+                        <form class="subscription__form" action="#" method="post"> <!--лэйбл должен обязательно быть до input к которому применяется? Вроде можно-->
+                            <input class="subscription__input" id="email-subscribe" type="email" placeholder="Ваш e-mail">
+                            <label for="email-subscribe"></label> 
+                            <button class="button subscription__button" type="submit">Подписаться</button>
+                        </form>
+            
+                        <p class="subscription__text">Это бесплатно</p>
+                    </div>
                 </div>
+                
     
             </section>
         </div>
@@ -428,53 +431,59 @@
 
 
     <footer class="main-footer">
-        <section class="footer-find">
-            <h2 class="content-hidden">Как нас найти?</h2>
 
-            <a class="footer-find__logo" href="index.html"><img class="footer-find__img" src="img/icons/logo-footer.svg" alt="Логотип магазина Device - Магазин гаджетов" width="144,9" height="36"></a>
-            <p class="text--small footer-find__address">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
-            </p>
-        </section>
+        <div class="main-footer__wrap container">
+            <section class="footer-find">
+                <h2 class="content-hidden">Как нас найти?</h2>
+    
+                <a class="footer-find__logo" href="index.html"><img class="footer-find__img" src="img/icons/logo-footer.svg" alt="Логотип магазина Device - Магазин гаджетов" width="144,9" height="36"></a>
+                <p class="text--small footer-find__address">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
+                </p>
+            </section>
+    
+            <section class="footer-social">
+                <h2 class="content-hidden">сервисы и соцсети</h2>
+    
+                <ul class="footer-social__list"> <!--возможно не нужно, а возможно нужно добавить классы для item-->
+                    <li class="main-navigation__item">
+                        <a class="button footer-social__button" href="#">Доставка</a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a class="button footer-social__button" href="#">Гарантия</a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a class="button footer-social__button" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="footer-social__icons">
+                    <li class="footer-social__icon">
+                        <a class="footer-social__icon--hover footer-social__facebook" href="#"></a>
+                    </li>
+                    <li class="footer-social__icon">
+                        <a class="footer-social__icon--hover footer-social__instagram" href="#"></a>
+                    </li>
+                    <li class="footer-social__icon">
+                        <a class="footer-social__icon--hover footer-social__twitter" href="#"></a>
+                    </li>
+                </ul>
+            </section>
+    
+            <section class="footer-social__contacts">
+                <h2 class="content-hidden">Как с нами связаться</h2>
+    
+                <a class="footer-social__phone text--small" href="tel:+78128121212">
+                    Тел.: +7 (812) 812-12-12
+                </a>
+                
+                <a class="footer-social__copyright" href="#"><img class="footer-social__copyright-img" src="img/icons/logo-dev.svg" alt="разработчик" width="115" height="33"></a>
+            </section>
 
-        <section class="footer-social">
-            <h2 class="content-hidden">сервисы и соцсети</h2>
-
-            <ul class="main-navigation__list footer-social__list"> <!--возможно не нужно, а возможно нужно добавить классы для item-->
-                <li class="main-navigation__item">
-                    <a class="button footer-social__button" href="#">Доставка</a>
-                </li>
-                <li class="main-navigation__item">
-                    <a class="button footer-social__button" href="#">Гарантия</a>
-                </li>
-                <li class="main-navigation__item">
-                    <a class="button footer-social__button" href="#">Контакты</a>
-                </li>
-            </ul>
-            <ul class="footer-social__icons">
-                <li class="footer-social__icon">
-                    <a class="footer-social__icon--hover footer-social__facebook" href="#"></a>
-                </li>
-                <li class="footer-social__icon">
-                    <a class="footer-social__icon--hover footer-social__instagram" href="#"></a>
-                </li>
-                <li class="footer-social__icon">
-                    <a class="footer-social__icon--hover footer-social__twitter" href="#"></a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="footer-social__contacts">
-            <h2 class="content-hidden">Как с нами связаться</h2>
-
-            <p class="text--small footer-social__phone-wrap"><a class="footer-social__phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-            </p>
-            
-            <a class="footer-social__copyright" href="#"><img class="footer-social__copyright-img" src="img/icons/logo-dev.svg" alt="разработчик" width="115" height="33"></a>
-        </section>
+        </div>
+        
     </footer>
 
 
-    <section class="modal-delivery"><!--модальное окно для оформления доставки-->
+    <section class="modal-delivery" hidden><!--модальное окно для оформления доставки-->
             <h2 class="text--title">Доставка под заказ</h2>
             <button class="modal-delivery__close"></button>
 
