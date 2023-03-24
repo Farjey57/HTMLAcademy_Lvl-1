@@ -109,7 +109,6 @@
             </ul>
         </div>
         
-
         <nav class="main-navigation">
             <ul class="main-navigation__list">
                 <li class="main-navigation__item">
@@ -132,25 +131,27 @@
         <div class="container-wrap">
             <section class="slider"> <!--Слайдер-->
                 <h2 class="content-hidden">Рекомендации</h2> <!--Как правильно скрыть?-->   
-    
                 
                 <div class="slide-number-wrap">
-                    <span class="slider-content__slide-number">0<span>1</span></span>
+                    <span class="slider-content__slide-number">
+                        0<span>1</span>
+                    </span>
                 </div>
-                <ul class="control-wrapper"> <!--навигация по слайдеру-->
-                    <li>
-                        <a class="control-wrapper__control control-wrapper__control--active" href=""></a>
+                <ul class="slider-control"> <!--навигация по слайдеру-->
+                    <li class="slider-control__item">
+                        <a class="slider-control__control slider-control__control--active" href=""></a>
                     </li>
-                    <li>
-                        <a class="control-wrapper__control" href="#"></a>
+                    <li class="slider-control__item">
+                        <a class="slider-control__control" href="#"></a>
                     </li>
-                    <li>
-                        <a class="control-wrapper__control" href="#"></a>
+                    <li class="slider-control__item">
+                        <a class="slider-control__control" href="#"></a>
                     </li>
                 </ul> 
+
                 <!--1-->
 
-                <article class="slider-content">
+                <article class="slider-content slider-content--active">
                     
                     <div class="slide-picture">
                         <div class="slide-picture__pic-control-wrap">
@@ -184,24 +185,26 @@
                     </div>
                     
                 </article>
-    
+
                 <!--2-->
-    
+
                 <article class="slider-content">
-    
+                    
                     <div class="slide-picture">
-                        <button class="slide-picture__pic-control slide-picture__control-left" type="button"></button>
+                        <div class="slide-picture__pic-control-wrap">
+                            <button class="slide-picture__pic-control slide-picture__control-left" type="button"></button>
+                            <button class="slide-picture__pic-control slide-picture__control-right" type="button"></button>
+                        </div>
+                        
                         <figure class="slide-picture__img-wrap">
                             <a class="slide-picture__link" href="#"><img class="slide-picture__img" src="img/slider-2.png" alt="Мотивирующие фитнес-браслеты" width="560" height="560"></a>
                         </figure>
-                        <button class="slide-picture__pic-control slide-picture__control-right" type="button"></button>
                     </div>
                     
                     <div class="slide-preview">
                         <h3 class="text--title">Худеем<br>правильно!</h3>
         
-                        <p class="slide-preview__text">Мотивирующие фитнес-браслеты помогут найти в себе силы <br> не пропускать занятия и соблюдать диету.
-                        </p>
+                        <p class="slide-preview__text">Мотивирующие фитнес-браслеты помогут найти в себе силы <br> не пропускать занятия и соблюдать диету.</p>
             
                         <a class="button button--special slide-preview__button-more" href="#">Подробнее</a>                
             
@@ -216,24 +219,26 @@
                     </div>
                     
                 </article>
-    
+
                 <!--3-->
-    
+
                 <article class="slider-content">
-    
+                    
                     <div class="slide-picture">
-                        <button class="slide-picture__pic-control slide-picture__control-left" type="button"></button>
+                        <div class="slide-picture__pic-control-wrap">
+                            <button class="slide-picture__pic-control slide-picture__control-left" type="button"></button>
+                            <button class="slide-picture__pic-control slide-picture__control-right" type="button"></button>
+                        </div>
+                        
                         <figure class="slide-picture__img-wrap">
                             <a class="slide-picture__link" href="#"><img class="slide-picture__img" src="img/slider-3.png" alt="Самая длинная палка для селфи" width="560" height="560"></a>
                         </figure>
-                        <button class="slide-picture__pic-control slide-picture__control-right" type="button"></button>
                     </div>
                     
                     <div class="slide-preview">
                         <h3 class="text--title">Делай селфи,<br>как Бен Стиллер!</h3>
         
-                        <p class="slide-preview__text">Самая длинная палка для селфи доступна в нашем магазине. <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
-                        </p>
+                        <p class="slide-preview__text">Самая длинная палка для селфи доступна в нашем магазине. <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
             
                         <a class="button button--special slide-preview__button-more" href="#">Подробнее</a>                
             
@@ -252,59 +257,60 @@
                     </div>
                     
                 </article>
+    
                 
             </section>
     
-    
+                
             <section class="main-catalog">
+
                 <h2 class="content-hidden">Каталог</h2>
     
                 <nav class="catalog-nav">
                     <ul class="catalog-nav__list">
                         <li class="catalog-nav__item focus" tabindex="0">
-                            <a class="catalog-nav__link" href="#" tabindex="-1">
-                                <div class="catalog-nav__icon catalog-nav__virtual-reality"></div>
+                            <a class="catalog-nav__link catalog-nav__virtual-reality" href="#" tabindex="-1">    
                                 <p class="catalog-nav__title">Виртуальная<br> реальность</p>
                             </a>
                         </li>
                         <li class="catalog-nav__item focus">
-                            <a class="catalog-nav__link" href="#">
-                                <div class="catalog-nav__icon catalog-nav__monopods"></div>
+                            <a class="catalog-nav__link catalog-nav__monopods" href="#">
                                 <p class="catalog-nav__title">Моноподы<br> для селфи</p> 
                             </a>
                         </li>
                         <li class="catalog-nav__item focus">
-                            <a class="catalog-nav__link" href="#">
-                                <div class="catalog-nav__icon catalog-nav__action-cameras"></div>
+                            <a class="catalog-nav__link catalog-nav__action-cameras" href="#">
                                 <p class="catalog-nav__title">Экшн-камеры</p>
                             </a>
                         </li>
                         <li class="catalog-nav__item focus">
-                            <a class="catalog-nav__link" href="#">
-                                <div class="catalog-nav__icon catalog-nav__fitness-bracelets"></div>
+                            <a class="catalog-nav__link catalog-nav__fitness-bracelets" href="#">
                                 <p class="catalog-nav__title">Фитнес-браслеты</p>
                             </a>
                         </li>
                         <li class="catalog-nav__item focus">
-                            <a class="catalog-nav__link" href="#">
-                                <div class="catalog-nav__icon catalog-nav__watches"></div>
+                            <a class="catalog-nav__link catalog-nav__watches" href="#">
                                 <p class="catalog-nav__title">Умные часы</p>
                             </a>
                         </li>
                         <li class="catalog-nav__item focus">
-                            <a class="catalog-nav__link" href="#">
-                                <div class="catalog-nav__icon catalog-nav__copters"></div>
+                            <a class="catalog-nav__link catalog-nav__copters" href="#">
                                 <p class="catalog-nav__title">Квадрокоптеры</p>
                             </a>
                         </li>
                     </ul>
                 </nav>
+
+
             </section>
     
+
             <section class="services">
+
                 <h2 class="content-hidden">Сервисы</h2>
     
-                <div class="services-control">
+                <div class="services__wrap">
+                    <div class="services-control">
                     <ul class="services-control__list">
                         <li class="services-control__item services-control__item--active">
                             <button class="button button--special" type="button">Доставка</button>
@@ -320,13 +326,15 @@
                 
     
                 <section class="services__item services__item--active"> <!--вкладка доставки-->
-                    <h3 class="text--title">Доставка</h3>
+                    <div class="services__item-wrap">
+                        <h3 class="text--title">Доставка</h3>
     
-                    <p>Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно! Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.
-                    </p>
+                        <p>Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно! Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.
+                        </p>
+                    </div>
                 </section>
     
-                <section class="services__item"> <!--Вкладка Гарантия-->
+                <section class="services__item" hidden> <!--Вкладка Гарантия-->
                     <h3 class="text--title">Гарантия</h3>
     
                     <p>Если из-за возгорания купленного у нас товара у вас<br>
@@ -335,12 +343,15 @@
                     </p>
                 </section>
     
-                <section class="services__item"> <!--вкладка Кредит-->
+                <section class="services__item" hidden> <!--вкладка Кредит-->
                     <h3 class="text--title">Кредит</h3>
     
                     <p>Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для банка, разумеется.
                     </p>
                 </section>
+
+                </div>
+                
                 
             </section>
     
