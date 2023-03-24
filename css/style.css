@@ -419,10 +419,6 @@ figure {
     column-gap: 40px;
 }
 
-.main-navigation__link {
-    
-}
-
 .main-navigation__link span {
     letter-spacing: normal;
 }
@@ -781,20 +777,56 @@ figure {
 
 /* About */
 
+.info-wrap {
+    display: grid;
+    grid-template: auto/1fr 1fr;
+}
+
+.about__title {
+    margin: 0 0 48px;
+}
+
 .about__title::before {
     content: '';
     display: block;
     width: 84px;
     height: 7px;
     background-color: var(--basic-black);
+    margin-bottom: 40px;
+}
+
+.info__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+}
+
+.info__wrap p {
+    margin: 0;
+}
+
+.info__wrap h3 {
+    margin: 0 0 15px;
+}
+
+.info__wrap .button {
+    width: 259px;
+    height: 40px;
 }
 
 .about__list {
     list-style: disc inside;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
 } 
 
 .about__item::marker {
     color: var(--special-yellow-dark);
+    margin-right: 26px;
 }
 
 /* Contacts */
@@ -807,32 +839,56 @@ figure {
 /* Subscription Form */
 
 .subscription {
+    height: 421px;
     background-color: var(--basic-light);
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr;
+    row-gap: 144px;
+}
+
+.subscription h2 {
+    margin: 64px 0 0;
+}
+
+.subscription .text {
+    margin: 74px 0 0;
+}
+
+.subscription__form-wrap {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-between;
 }
 
 .subscription__form {
     display: flex;
+    
 }
 
 .subscription__input, .subscription__button {
     background: inherit;
     display: block;
+    height: 55px;
+    box-sizing: border-box;
 }
 
 .subscription__input {
     color: var(--basic-black);
     border: solid var(--special-form-background);
     border-width: 0px 0px 3px 0px;
+    width: 557px;
 }
 
 .subscription__input::placeholder {
     color: var(--basic-black);
     opacity: 0.5;
+    padding-left: 16px;
 }
 
 .subscription__button {
     border: 3px solid var(--special-form-background);
     text-align: center;
+    width: 253px;
 }
 
 .subscription__text::before {
@@ -842,6 +898,7 @@ figure {
     display: inline-block;
     width: 16px;
     height: 16px;
+    margin-right: 16px;
 }
 
 /* Main Footer */
