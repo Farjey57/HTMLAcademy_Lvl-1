@@ -16,22 +16,28 @@
 
 <body class="text page-body">
 
-    <header class="main-header">
+    <header class="container main-header">
+
         <a class="header-logo" href="index.html">
             <img class="header-logo__img" src="img/icons/logo-header.svg" alt="Логотип магазина Device - Магазин гаджетов" width="145" height="36">
         </a>
+
         <form class="search-form" action="#" method="get">
             <input class="text--small search-form__input focus" type="text" placeholder="Текст поиска">
             <button class="text--small search-form__button focus" type="submit">Найти</button>
         </form>
-        <a class="header-link header-link__header-login" href="#">Войти</a>
+        
         <div class="header-link-wrap">
+            <a class="header-link header-link__header-login" href="#">Войти</a>
             <a class="header-link header-link__header-compare" href="#">Сравнить</a>
-            <a class="header-link header-link__header-basket" href="#">Корзина</a> 
+            <a class="header-link header-link__header-basket" href="#">
+                Корзина
+                <div class="header-link__counter">2</div>
+            </a> <!--заменил так как это скорее ссылка, чем кнопка открытия поповера. Поповер по ховеру-->
         </div>
         
 
-        <div class="popup-basket">
+        <div class="popup-basket" hidden>
             
             <ul class="popup-basket__basket-list">
                 <li class="popup-basket__basket-item">
@@ -51,7 +57,7 @@
             </ul>
 
             <div class="popup-basket__total-wrap">
-                <p class="text--popup">Товаров: 2</p>
+                <p class="text--popup">Товаров: 2</p> <!--из dl-dt-dd передалли в два p, т.к. 1. это проще стилизовать и размещать; 2. dl-dt-dd в основном для задания свойств, характеристик-->
                 <p class="text--popup">Сумма: 2000 ₽</p>
             </div>
             
@@ -66,8 +72,7 @@
 
         <div class="header-catalog">
             <button class="button header-catalog__button" type="button">Каталог товаров</button>
-            <ul class="header-catalog__dropdown"> 
-            
+            <ul class="header-catalog__dropdown" hidden> <!--раскрывающееся меню. В виде списка списков, удобно для стилизации, семантически правильно. ОК-->
                 <li class="header-catalog__column">
                     <ul class="header-catalog__list">
                         <li class="header-catalog__item">
@@ -104,7 +109,6 @@
             </ul>
         </div>
         
-
         <nav class="main-navigation">
             <ul class="main-navigation__list">
                 <li class="main-navigation__item">
@@ -114,7 +118,7 @@
                     <a class="button main-navigation__link" href="blanc.html">Гарантия</a>
                 </li>
                 <li class="main-navigation__item">
-                    <a class="button main-navigation__link" href="blanc.html">Контакты</a>
+                    <a class="button main-navigation__link" href="blanc.html">Контакт<span>ы</span></a>
                 </li>
             </ul>
         </nav>
@@ -122,154 +126,177 @@
     </header>
 
 
-    <main class="container">
+    <main>
+        <div class="container breadcrumbs">
+            <h1 class="text--title">Моноподы для селфи</h1>
 
-        <h1 class="text--title">Моноподы для селфи</h1>
-        <ul class="breadcrumbs text--point"> <!--Хлебные крошки-->
-            <li class="breadcrumbs__item">
-                <a href="index.html">Главная</a>
-            </li>
-            <li class="breadcrumbs__item">
-                <a href="index.html">Каталог товаров</a>
-            </li>
-            <li class="breadcrumbs__item breadcrumbs__item--active">
-                Моноподы для селфи
-            </li> <!--Активная вкладка-->
-        </ul>
+            <ul class="breadcrumbs__list text--point"> <!--Хлебные крошки-->
+                <li class="breadcrumbs__item">
+                    <a href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="index.html">Каталог товаров</a>
+                </li>
+                <li class="breadcrumbs__item breadcrumbs__item--active">
+                    Моноподы для селфи
+                </li> <!--Активная вкладка-->
+            </ul>
+        </div>
+        
 
         <section class="catalog">
-            <section class="filter">
-                <h2 class="text--catalog-title">фильтр:</h2>
 
-                <form class="filter__form text--point" action="#" method="get">
+            <div class="catalog__layout container">
+
+                <section class="filter">
+                    <h2 class="filter__title text--catalog-title">фильтр:</h2>
+    
+                    <form class="filter__form text--point" action="#" method="get">
+                        
+                        <fieldset class="filter__fieldset"> 
+                            <legend class="filter__legend text--label">Стоимость</legend><!--Из транспортных компаний-->
+                            <div class="range">
+                                <div class="range__bullet"></div>
+                                <div class="range__line range__line--active"></div>
+                                <div class="range__bullet"></div>
+                                <div class="range__line"></div>
+                            </div>
+                            <div class='filter-input'> 
+                                <input class="filter__input filter__input--text" type="text" placeholder="от 0">
+                                <input class="filter__input filter__input--text" type="text" placeholder="до 5000">
+                            </div>                           
+                            
+                        </fieldset>
+    
+                        <fieldset class="filter__fieldset">   
+                            <legend class="filter__legend text--label">Цвет</legend>
+                            <ul class="filter__fieldset-list">
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--checkbox" type="checkbox" name="black" id="filter-black" checked>
+                                    <label class="filter__label" for="filter-black">Черный</label>
+                                </li>
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--checkbox" type="checkbox" name="white" id="filter-white" checked>
+                                    <label class="filter__label" for="filter-white">Белый</label>
+                                </li>
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--checkbox" type="checkbox" name="blue" id="filter-blue">
+                                    <label class="filter__label" for="filter-blue">Синий</label>
+                                </li>
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--checkbox" type="checkbox" name="red" id="filter-red">
+                                    <label class="filter__label" for="filter-red">Красный</label>
+                                </li>
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--checkbox" type="checkbox" name="pink" id="filter-pink">
+                                    <label class="filter__label" for="filter-pink">Розовый</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+    
+                        <fieldset class="filter__fieldset">
+                            <legend class="filter__legend text--label">Bluetooth</legend>
+                            <ul class="filter__fieldset-list filter__radio">
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--radio" type="radio" name="Bluetooth" value="true" id="filter-bluetooth-yes" checked>
+                                    <label class="filter__label filter__radiobox" for="filter-bluetooth-yes">Есть</label>
+                                </li>
+                                <li class="filter__fieldset-item">
+                                    <input class="filter__input--radio" type="radio" name="Bluetooth" value="false" id="filter-bluetooth-no">
+                                    <label class="filter__label filter__radiobox" for="filter-bluetooth-no">Нет</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+    
+                        <button class="filter__button button button--special" type="submit">Показать</button>
+                    </form>
+    
+                </section>
+    
+                <section class="catalog__show"> <!--страница каталога-->
+    
+                    <!--Может тут должна быть форма, т.к. мы отправляем данные о сортировке. Надо уточнить-->
+                    <div class="sort">
+                        <h2 class="text--catalog-title">Cортировка:</h2>
                     
-                    <fieldset class="filter__fieldset"> 
-                        <legend class="filter__legend text--label">Стоимость</legend><!--Из транспортных компаний-->
-                        <input class="filter__input filter__input--range" type="range">
-                        <input class="filter__input filter__input--text" type="text" placeholder="От 0">
-                        <input class="filter__input filter__input--text" type="text" placeholder="До 5000">
-                    </fieldset>
+                        <div class="sort__wrap">
+                            <ul class="sort__list">
+                                <li class="sort__item sort__item--active" hidden>Популярные</li>
+                                <li class="sort__item" hidden>Наличие</li>
+                                <li class="sort__item" hidden>Цена</li>
+                            </ul>
+                            <button class="sort__button"></button>
+                        </div>
+                        
+                        <div class="sort__up-down">
+                            <button class="sort__button sort__button--up" type="button"></button>
+                            <button class="sort__button sort__button--down" type="button"></button>
+                        </div>
 
-                    <fieldset class="filter__fieldset">   
-                        <legend class="filter__legend text--label">Цвет</legend>
-                        <ul class="filter__fieldset-list">
-                            <li class="filter__fieldset-item">
-                                <input class="filter__input--checkbox" type="checkbox" name="black" id="filter-black" checked>
-                                <label class="filter__label" for="filter-black">Черный</label>
-                            </li>
-                            <li class="filter__fieldset-item">
-                                <input class="filter__input--checkbox" type="checkbox" name="white" id="filter-white" checked>
-                                <label class="filter__label" for="filter-white">Белый</label>
-                            </li>
-                            <li class="filter__fieldset-item">
-                                <input class="filter__input--checkbox" type="checkbox" name="blue" id="filter-blue">
-                                <label class="filter__label" for="filter-blue">Синий</label>
-                            </li>
-                            <li class="filter__fieldset-item">
-                                <input class="filter__input--checkbox" type="checkbox" name="red" id="filter-red">
-                                <label class="filter__label" for="filter-red">Красный</label>
-                            </li>
-                            <li class="filter__fieldset-item">
-                                <input class="filter__input--checkbox" type="checkbox" name="pink" id="filter-pink">
-                                <label class="filter__label" for="filter-pink">Розовый</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-
-                    <fieldset class="filter__fieldset">
-                        <legend class="filter__legend text--label">Bluetooth</legend>
-                        <ul class="filter__fieldset-list filter__radio">
-                            <li class="filter__fieldset-item">
-                                <input class="filter__input--radio" type="radio" name="Bluetooth" value="true" id="filter-bluetooth-yes" checked>
-                                <label class="filter__label filter__radiobox" for="filter-bluetooth-yes">Есть</label>
-                            </li>
-                            <li class="filter__fieldset-item">
-                                <input class="filter__input--radio" type="radio" name="Bluetooth" value="false" id="filter-bluetooth-no">
-                                <label class="filter__label filter__radiobox" for="filter-bluetooth-no">Нет</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-
-                    <button class="button button--special" type="submit">Показать</button>
-                </form>
-
-            </section>
-
-            <section class="catalog__show"> <!--страница каталога-->
-
-                <!--Может тут должна быть форма, т.к. мы отправляем данные о сортировке. Надо уточнить-->
-                <h2 class="text--catalog-title">Cортировка:</h2>
-                
-                <div class="sort">
-                    <ul class="sort__list">
-                        <li class="sort__item sort__item--active">Популярные</li>
-                        <li class="sort__item">Наличие</li>
-                        <li class="sort__item">Цена</li>
-                    </ul>
-                    <button class="sort__button"></button>
-                </div>
-                
-                <button class="sort__button sort__button--up" type="button"></button>
-                <button class="sort__button sort__button--down" type="button"></button>
-
-                <div class="catalog__wrap">
-                    <ul class="catalog__list">
-                        <li class="catalog__item">
-                            <a class="catalog__link" href="#">
-                                <img class="catalog__img" src="img/catalog-product-1.png" alt="Любительская селфи-палка" width="360" height="380">
-                                <h3 class="text--label">Любительская<br>селфи-палка</h3>
-                                <p class="catalog__text">500 ₽</p> 
-                            </a>
-                        </li>
-                        <li class="catalog__item">
-                            <a class="catalog__link" href="#">
-                                <img class="catalog__img" src="img/catalog-product-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
-                                <h3 class="text--label">Профессиональная<br>селфи-палка</h3>
-                                <p class="catalog__text">1 500 ₽</p>
-                            </a>
-                        </li>
-                        <li class="catalog__item">
-                            <a class="catalog__link" href="#">
-                                <img class="catalog__img" src="img/catalog-product-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
-                                <h3 class="text--label">Непотопляемая<br>селфи-палка</h3>
-                                <p class="catalog__text">2 500 ₽</p>
-                            </a>
-                        </li>
-                        <li class="catalog__item">
-                            <a class="catalog__link" href="#">
-                                <img class="catalog__img" src="img/catalog-product-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
-                                <h3 class="text--label">Селфи-палка «Следуй за<br>мной»</h3>
-                                <p class="catalog__text">1 500 ₽</p>
-                            </a>
-                        </li>
-                    </ul>
-                
-                    <button class="text--catalog-title catalog__button" type="button">Загрузить ещё</button>
-
-                    <div class="catalog__nav"> <!--навигация по каталогу, обернул сразу в div,  хотя на данном этапе можно без этого-->
-                        <button class="button catalog__nav-button catalog__nav-button--disabled" type="button">назад</button>
-                        <ul class="catalog__nav-list">
-                            <li class="catalog__nav-item">
-                                <a class="catalog__nav-link text--small" href="#">1</a>
-                            </li>
-                            <li class="catalog__nav-item">
-                                <a class="catalog__nav-link text--small" href="#">2</a>
-                            </li>
-                            <li class="catalog__nav-item">
-                                <a class="catalog__nav-link text--small" href="#">3</a>
-                            </li>
-                            <li class="catalog__nav-item--ellipsis text--small">
-                                ...
-                            </li>
-                            <li class="catalog__nav-item">
-                                <a class="catalog__nav-link text--small" href="#">15</a>
-                            </li>
-                        </ul>
-                        <button class="button catalog__nav-button" type="button">вперёд</button>
                     </div>
-
-                </div>
-            </section>
+                    
+                    
+    
+                    <div class="catalog__wrap">
+                        <ul class="catalog__list">
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <img class="catalog__img" src="img/catalog-product-1.png" alt="Любительская селфи-палка" width="360" height="380">
+                                    <h3 class="text--label">Любительская<br>селфи-палка</h3>
+                                    <p class="catalog__text">500 ₽</p> 
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <img class="catalog__img" src="img/catalog-product-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
+                                    <h3 class="text--label">Профессиональная<br>селфи-палка</h3>
+                                    <p class="catalog__text">1 500 ₽</p>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <img class="catalog__img" src="img/catalog-product-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
+                                    <h3 class="text--label">Непотопляемая<br>селфи-палка</h3>
+                                    <p class="catalog__text">2 500 ₽</p>
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    <img class="catalog__img" src="img/catalog-product-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+                                    <h3 class="text--label">Селфи-палка «Следуй за<br>мной»</h3>
+                                    <p class="catalog__text">1 500 ₽</p>
+                                </a>
+                            </li>
+                        </ul>
+                    
+                        <button class="text--catalog-title catalog__button" type="button">Загрузить ещё</button>
+    
+                        <div class="catalog__nav"> <!--навигация по каталогу, обернул сразу в div,  хотя на данном этапе можно без этого-->
+                            <button class="button catalog__nav-button catalog__nav-button--disabled" type="button">назад</button>
+                            <ul class="catalog__nav-list">
+                                <li class="catalog__nav-item">
+                                    <a class="catalog__nav-link text--small" href="#">1</a>
+                                </li>
+                                <li class="catalog__nav-item">
+                                    <a class="catalog__nav-link text--small" href="#">2</a>
+                                </li>
+                                <li class="catalog__nav-item">
+                                    <a class="catalog__nav-link text--small" href="#">3</a>
+                                </li>
+                                <li class="catalog__nav-item catalog__nav-item--ellipsis text--small">
+                                    ...
+                                </li>
+                                <li class="catalog__nav-item">
+                                    <a class="catalog__nav-link text--small" href="#">15</a>
+                                </li>
+                            </ul>
+                            <button class="button catalog__nav-button" type="button">вперёд</button>
+                        </div>
+    
+                    </div>
+                </section>
+            </div>
+            
         </section>
         
 
@@ -277,49 +304,55 @@
 
 
     <footer class="main-footer">
-        <section class="footer-find">
-            <h2 class="content-hidden">Как нас найти?</h2>
 
-            <a class="footer-find__logo" href="index.html"><img class="footer-find__img" src="img/icons/logo-footer.svg" alt="Логотип магазина Device - Магазин гаджетов" width="144,9" height="36"></a>
-            <p class="text--small footer-find__address">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
-            </p>
-        </section>
+        <div class="main-footer__wrap container">
+            <section class="footer-find">
+                <h2 class="content-hidden">Как нас найти?</h2>
+    
+                <a class="footer-find__logo" href="index.html"><img class="footer-find__img" src="img/icons/logo-footer.svg" alt="Логотип магазина Device - Магазин гаджетов" width="144,9" height="36"></a>
+                <p class="text--small footer-find__address">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
+                </p>
+            </section>
+    
+            <section class="footer-social">
+                <h2 class="content-hidden">сервисы и соцсети</h2>
+    
+                <ul class="footer-social__list"> <!--возможно не нужно, а возможно нужно добавить классы для item-->
+                    <li class="main-navigation__item">
+                        <a class="button footer-social__button" href="#">Доставка</a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a class="button footer-social__button" href="#">Гарантия</a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a class="button footer-social__button" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="footer-social__icons">
+                    <li class="footer-social__icon">
+                        <a class="footer-social__icon--hover footer-social__facebook" href="#"></a>
+                    </li>
+                    <li class="footer-social__icon">
+                        <a class="footer-social__icon--hover footer-social__instagram" href="#"></a>
+                    </li>
+                    <li class="footer-social__icon">
+                        <a class="footer-social__icon--hover footer-social__twitter" href="#"></a>
+                    </li>
+                </ul>
+            </section>
+    
+            <section class="footer-social__contacts">
+                <h2 class="content-hidden">Как с нами связаться</h2>
+    
+                <a class="footer-social__phone text--small" href="tel:+78128121212">
+                    Тел.: +7 (812) 812-12-12
+                </a>
+                
+                <a class="footer-social__copyright" href="#"><img class="footer-social__copyright-img" src="img/icons/logo-dev.svg" alt="разработчик" width="115" height="33"></a>
+            </section>
 
-        <section class="footer-social">
-            <h2 class="content-hidden">сервисы и соцсети</h2>
-
-            <ul class="main-navigation__list footer-social__list"> <!--возможно не нужно, а возможно нужно добавить классы для item-->
-                <li class="main-navigation__item">
-                    <a class="button footer-social__button" href="#">Доставка</a>
-                </li>
-                <li class="main-navigation__item">
-                    <a class="button footer-social__button" href="#">Гарантия</a>
-                </li>
-                <li class="main-navigation__item">
-                    <a class="button footer-social__button" href="#">Контакты</a>
-                </li>
-            </ul>
-            <ul class="footer-social__icons">
-                <li class="footer-social__icon">
-                    <a class="footer-social__icon--hover footer-social__facebook" href="#"></a>
-                </li>
-                <li class="footer-social__icon">
-                    <a class="footer-social__icon--hover footer-social__instagram" href="#"></a>
-                </li>
-                <li class="footer-social__icon">
-                    <a class="footer-social__icon--hover footer-social__twitter" href="#"></a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="footer-social__contacts">
-            <h2 class="content-hidden">Как с нами связаться</h2>
-
-            <p class="text--small footer-social__phone-wrap"><a class="footer-social__phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-            </p>
-            
-            <a class="footer-social__copyright" href="#"><img class="footer-social__copyright-img" src="img/icons/logo-dev.svg" alt="разработчик" width="115" height="33"></a>
-        </section>
+        </div>
+        
     </footer>
 
 </body>
