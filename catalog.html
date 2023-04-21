@@ -18,22 +18,29 @@
 
     <header class="container main-header">
 
-        <a class="header-logo" href="index.html">
+        <a class="header-logo logo focus" href="index.html">
             <img class="header-logo__img" src="img/icons/logo-header.svg" alt="Логотип магазина Device - Магазин гаджетов" width="145" height="36">
         </a>
 
         <form class="search-form" action="#" method="get">
-            <input class="text--small search-form__input focus" type="text" placeholder="Текст поиска">
-            <button class="text--small search-form__button focus" type="submit">Найти</button>
+            <div class="search-form__wrap focus">
+                <input class="text--small search-form__input" type="text" placeholder="Текст поиска">
+            </div>
+            <div class="search-form__wrap focus">
+                <button class="text--small search-form__button" type="submit">Найти</button>
+            </div>
         </form>
         
         <div class="header-link-wrap">
-            <a class="header-link header-link__header-login" href="#">Войти</a>
-            <a class="header-link header-link__header-compare" href="#">Сравнить</a>
-            <a class="header-link header-link__header-basket" href="#">
-                Корзина
-                <div class="header-link__counter">2</div>
-            </a> <!--заменил так как это скорее ссылка, чем кнопка открытия поповера. Поповер по ховеру-->
+            <a class="header-link header-link__header-login focus" href="#">Войти</a>
+            <button class="header-link header-link__exit focus" hidden>Выйти</button>
+            <a class="header-link header-link__header-compare focus" href="#">Сравнить</a>
+            <div class="header-link__button">
+                <button class="header-link header-link__header-basket" href="#">
+                    Корзина
+                    <div class="header-link__counter">2</div>
+                </button>
+            </div>
         </div>
         
 
@@ -71,7 +78,7 @@
         
 
         <div class="header-catalog">
-            <button class="button header-catalog__button" type="button">Каталог товаров</button>
+            <button class="button header-catalog__button focus" type="button">Каталог товаров</button>
             <ul class="header-catalog__dropdown" hidden> <!--раскрывающееся меню. В виде списка списков, удобно для стилизации, семантически правильно. ОК-->
                 <li class="header-catalog__column">
                     <ul class="header-catalog__list">
@@ -112,13 +119,13 @@
         <nav class="main-navigation">
             <ul class="main-navigation__list">
                 <li class="main-navigation__item">
-                    <a class="button main-navigation__link" href="blanc.html">Доставка</a>
+                    <a class="button main-navigation__link focus" href="blanc.html">Доставка</a>
                 </li>
                 <li class="main-navigation__item">
-                    <a class="button main-navigation__link" href="blanc.html">Гарантия</a>
+                    <a class="button main-navigation__link focus" href="blanc.html">Гарантия</a>
                 </li>
                 <li class="main-navigation__item">
-                    <a class="button main-navigation__link" href="blanc.html">Контакт<span>ы</span></a>
+                    <a class="button main-navigation__link focus" href="blanc.html">Контакт<span>ы</span></a>
                 </li>
             </ul>
         </nav>
@@ -132,10 +139,10 @@
 
             <ul class="breadcrumbs__list text--point"> <!--Хлебные крошки-->
                 <li class="breadcrumbs__item">
-                    <a href="index.html">Главная</a>
+                    <a class="focus" href="index.html">Главная</a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <a href="index.html">Каталог товаров</a>
+                    <a class="focus" href="index.html">Каталог товаров</a>
                 </li>
                 <li class="breadcrumbs__item breadcrumbs__item--active">
                     Моноподы для селфи
@@ -156,14 +163,22 @@
                         <fieldset class="filter__fieldset"> 
                             <legend class="filter__legend text--label">Стоимость</legend><!--Из транспортных компаний-->
                             <div class="range">
-                                <div class="range__bullet"></div>
-                                <div class="range__line range__line--active"></div>
-                                <div class="range__bullet"></div>
-                                <div class="range__line"></div>
+                                <div class="range__line">
+                                    <div class="range__line--active" style="
+                                    width: calc(60%);
+                                    margin-left: calc(0% + 9px);
+                                    "></div>
+                                </div>
+                                <div class="range__bullet range__bullet-min focus" tabindex="0" style="
+                                left: 0%;
+                                "></div>
+                                <div class="range__bullet range__bullet-max focus" tabindex="0" style="
+                                left: 60%;
+                                "></div>  
                             </div>
                             <div class='filter-input'> 
-                                <input class="filter__input filter__input--text" type="text" placeholder="от 0">
-                                <input class="filter__input filter__input--text" type="text" placeholder="до 5000">
+                                <input class="filter__input filter__input--text focus" type="text" placeholder="от 0" value="">
+                                <input class="filter__input filter__input--text focus" type="text" placeholder="до 5000" value="">
                             </div>                           
                             
                         </fieldset>
@@ -172,23 +187,23 @@
                             <legend class="filter__legend text--label">Цвет</legend>
                             <ul class="filter__fieldset-list">
                                 <li class="filter__fieldset-item">
-                                    <input class="filter__input--checkbox" type="checkbox" name="black" id="filter-black" checked>
+                                    <input class="filter__input--checkbox focus" type="checkbox" name="black" id="filter-black" checked>
                                     <label class="filter__label" for="filter-black">Черный</label>
                                 </li>
                                 <li class="filter__fieldset-item">
-                                    <input class="filter__input--checkbox" type="checkbox" name="white" id="filter-white" checked>
+                                    <input class="filter__input--checkbox focus" type="checkbox" name="white" id="filter-white" checked>
                                     <label class="filter__label" for="filter-white">Белый</label>
                                 </li>
                                 <li class="filter__fieldset-item">
-                                    <input class="filter__input--checkbox" type="checkbox" name="blue" id="filter-blue">
+                                    <input class="filter__input--checkbox focus" type="checkbox" name="blue" id="filter-blue">
                                     <label class="filter__label" for="filter-blue">Синий</label>
                                 </li>
                                 <li class="filter__fieldset-item">
-                                    <input class="filter__input--checkbox" type="checkbox" name="red" id="filter-red">
+                                    <input class="filter__input--checkbox focus" type="checkbox" name="red" id="filter-red">
                                     <label class="filter__label" for="filter-red">Красный</label>
                                 </li>
                                 <li class="filter__fieldset-item">
-                                    <input class="filter__input--checkbox" type="checkbox" name="pink" id="filter-pink">
+                                    <input class="filter__input--checkbox focus" type="checkbox" name="pink" id="filter-pink">
                                     <label class="filter__label" for="filter-pink">Розовый</label>
                                 </li>
                             </ul>
@@ -208,7 +223,7 @@
                             </ul>
                         </fieldset>
     
-                        <button class="filter__button button button--special" type="submit">Показать</button>
+                        <button class="filter__button button button--special focus" type="submit">Показать</button>
                     </form>
     
                 </section>
@@ -220,17 +235,24 @@
                         <h2 class="text--catalog-title">Cортировка:</h2>
                     
                         <div class="sort__wrap">
-                            <ul class="sort__list">
-                                <li class="sort__item sort__item--active" hidden>Популярные</li>
-                                <li class="sort__item" hidden>Наличие</li>
-                                <li class="sort__item" hidden>Цена</li>
-                            </ul>
-                            <button class="sort__button"></button>
+                            <button class="sort__button focus">
+                                <ul class="sort__list"> <!--Думаю тут должен быть раскрывающийся список кнопок. А перед всем списокм активный выбор в виде div-->
+                                    <li class="sort__item sort__item--active" hidden>Популярные</li>
+                                    <li class="sort__item" hidden>Наличие</li>
+                                    <li class="sort__item" hidden>Цена</li>
+                                </ul>
+                                <div class="sort__item-icon"></div>
+                            </button>
                         </div>
                         
                         <div class="sort__up-down">
-                            <button class="sort__button sort__button--up" type="button"></button>
-                            <button class="sort__button sort__button--down" type="button"></button>
+                            <div class="sort__up-down-wrap">
+                                <button class="sort__icon sort__button--up focus" type="button"></button>
+                            </div>
+                            <div class="sort__up-down-wrap">
+                                <button class="sort__icon sort__button--down focus" type="button"></button>
+                            </div>
+                            
                         </div>
 
                     </div>
@@ -240,42 +262,56 @@
                     <div class="catalog__wrap">
                         <ul class="catalog__list">
                             <li class="catalog__item">
-                                <a class="catalog__link" href="#">
-                                    <img class="catalog__img" src="img/catalog-product-1.png" alt="Любительская селфи-палка" width="360" height="380">
+                                <a class="catalog__link catalog__link-mark focus" href="#">
+                                    <div class="catalog__img-wrap">
+                                        <img class="catalog__img" src="img/catalog-product-1.png" alt="Любительская селфи-палка" width="360" height="380">
+                                        <button class="catalog__link-button button button--special focus">Подробнее</button>
+                                    </div>
                                     <h3 class="text--label">Любительская<br>селфи-палка</h3>
-                                    <p class="catalog__text">500 ₽</p> 
+                                    <p class="catalog__text">500 ₽</p>
                                 </a>
                             </li>
                             <li class="catalog__item">
-                                <a class="catalog__link" href="#">
-                                    <img class="catalog__img" src="img/catalog-product-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
+                                <a class="catalog__link focus" href="#">
+                                    <div class="catalog__img-wrap">
+                                        <img class="catalog__img" src="img/catalog-product-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
+                                        <button class="catalog__link-button button button--special focus">Подробнее</button>
+                                    </div>
                                     <h3 class="text--label">Профессиональная<br>селфи-палка</h3>
                                     <p class="catalog__text">1 500 ₽</p>
                                 </a>
                             </li>
                             <li class="catalog__item">
-                                <a class="catalog__link" href="#">
-                                    <img class="catalog__img" src="img/catalog-product-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
+                                <a class="catalog__link catalog__link-mark focus" href="#">
+                                    <div class="catalog__img-wrap">
+                                        <img class="catalog__img" src="img/catalog-product-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
+                                        <button class="catalog__link-button button button--special focus">Подробнее</button>
+                                    </div>
                                     <h3 class="text--label">Непотопляемая<br>селфи-палка</h3>
                                     <p class="catalog__text">2 500 ₽</p>
                                 </a>
                             </li>
                             <li class="catalog__item">
-                                <a class="catalog__link" href="#">
-                                    <img class="catalog__img" src="img/catalog-product-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+                                <a class="catalog__link focus" href="#">
+                                    <div class="catalog__img-wrap">
+                                        <img class="catalog__img" src="img/catalog-product-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+                                        <button class="catalog__link-button button button--special focus">Подробнее</button>
+                                    </div>
                                     <h3 class="text--label">Селфи-палка «Следуй за<br>мной»</h3>
                                     <p class="catalog__text">1 500 ₽</p>
                                 </a>
                             </li>
                         </ul>
                     
-                        <button class="text--catalog-title catalog__button" type="button">Загрузить ещё</button>
+                        <button class="text--catalog-title catalog__button focus" type="button">Загрузить ещё</button>
     
                         <div class="catalog__nav"> <!--навигация по каталогу, обернул сразу в div,  хотя на данном этапе можно без этого-->
-                            <button class="button catalog__nav-button catalog__nav-button--disabled" type="button">назад</button>
+                            <button class="button catalog__nav-button focus" type="button">
+                                <span>назад</span>
+                            </button>
                             <ul class="catalog__nav-list">
                                 <li class="catalog__nav-item">
-                                    <a class="catalog__nav-link text--small" href="#">1</a>
+                                    <a class="catalog__nav-link text--small focus" href="#">1</a>
                                 </li>
                                 <li class="catalog__nav-item">
                                     <a class="catalog__nav-link text--small" href="#">2</a>
@@ -290,7 +326,9 @@
                                     <a class="catalog__nav-link text--small" href="#">15</a>
                                 </li>
                             </ul>
-                            <button class="button catalog__nav-button" type="button">вперёд</button>
+                            <button class="button catalog__nav-button focus" type="button">
+                                <span>вперёд</span>
+                            </button>
                         </div>
     
                     </div>
@@ -309,7 +347,7 @@
             <section class="footer-find">
                 <h2 class="content-hidden">Как нас найти?</h2>
     
-                <a class="footer-find__logo" href="index.html"><img class="footer-find__img" src="img/icons/logo-footer.svg" alt="Логотип магазина Device - Магазин гаджетов" width="144,9" height="36"></a>
+                <a class="footer-find__logo logo focus" href="index.html"><img class="footer-find__img" src="img/icons/logo-footer.svg" alt="Логотип магазина Device - Магазин гаджетов" width="144,9" height="36"></a>
                 <p class="text--small footer-find__address">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
                 </p>
             </section>
@@ -318,14 +356,14 @@
                 <h2 class="content-hidden">сервисы и соцсети</h2>
     
                 <ul class="footer-social__list"> <!--возможно не нужно, а возможно нужно добавить классы для item-->
-                    <li class="main-navigation__item">
-                        <a class="button footer-social__button" href="#">Доставка</a>
+                    <li class="footer-navigation__item">
+                        <a class="button footer-social__button focus" href="#">Доставка</a>
                     </li>
-                    <li class="main-navigation__item">
-                        <a class="button footer-social__button" href="#">Гарантия</a>
+                    <li class="footer-navigation__item">
+                        <a class="button footer-social__button focus" href="#">Гарантия</a>
                     </li>
-                    <li class="main-navigation__item">
-                        <a class="button footer-social__button" href="#">Контакты</a>
+                    <li class="footer-navigation__item">
+                        <a class="button footer-social__button focus" href="#">Контакты</a>
                     </li>
                 </ul>
                 <ul class="footer-social__icons">
@@ -344,11 +382,14 @@
             <section class="footer-social__contacts">
                 <h2 class="content-hidden">Как с нами связаться</h2>
     
-                <a class="footer-social__phone text--small" href="tel:+78128121212">
+                <a class="footer-social__phone text--small focus" href="tel:+78128121212">
                     Тел.: +7 (812) 812-12-12
                 </a>
                 
-                <a class="footer-social__copyright" href="#"><img class="footer-social__copyright-img" src="img/icons/logo-dev.svg" alt="разработчик" width="115" height="33"></a>
+                <a class="footer-social__copyright focus" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="115" height="33" fill="none">
+                    <path class="footer-social__copyright-img" fill="#FFC700" d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1-3.4 0-5.6 2.5-5.6 5.6 0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1c-.4 1.3-1.7 2.3-3.3 2.3-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"/></svg>
+                </a>
             </section>
 
         </div>
