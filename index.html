@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <title> Device - Магазин гаджетов </title>
 
+    <!-- <meta name="viewport" content="width=device-width, inirial-scale=1">  -->
+
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.min.css">
 
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"> <!--32х32, выбрана конвертация png to ico, т.к. меньше по размеру в 10 раз!! size='any' для того, чтобы использовался только для тех браузеров, которые не поддерживают другие иконки-->
     <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml"> <!--svg ресайзится сам. Удобен, но не везде поддерживается.-->
@@ -35,51 +37,50 @@
             <a class="header-link header-link__header-login focus" href="#">Войти</a>
             <button class="header-link header-link__exit focus" hidden>Выйти</button>
             <a class="header-link header-link__header-compare focus" href="#">Сравнить</a>
-            <div class="header-link__button">
-                <button class="header-link header-link__header-basket" href="#">
+            <div class="header-link__button header-link__button-basket">
+                <button class="header-link header-link__header-basket">
                     Корзина
-                    <div class="header-link__counter">2</div>
+                    <span class="header-link__counter">2</span>
                 </button>
-            </div>
-        </div>
+
+                <div class="popup-basket" hidden>   
+                    <!--Символ %20 = пробел в системных путях и URL-->         
+                    <ul class="popup-basket__basket-list">
+                        <li class="popup-basket__basket-item">
+                            <a class="text--popup popup-basket__link focus" href="blank.html">
+                                <img class="popup-basket__img" src="img/product-1-small%205.png" alt="Любительская селфи-палка" width="39" height="43">
+                                Любительская селфи-палка
+                            </a>
+                            <button class="popup-basket__button focus" type="button"></button>
+                        </li>
+                        <li class="popup-basket__basket-item">
+                            <a class="text--popup popup-basket__link focus" href="blank.html">
+                                <img class="popup-basket__img" src="img/product-2-small%205.png" alt="Профессиональная селфи-палка" width="39" height="43">
+                                Профессиональная селфи-палка
+                            </a>
+                            <button class="popup-basket__button focus" type="button"></button>
+                        </li>
+                    </ul>
         
-
-        <div class="popup-basket" hidden>
-            
-            <ul class="popup-basket__basket-list">
-                <li class="popup-basket__basket-item">
-                    <a class="text--popup popup-basket__link" href="blank.html">
-                        <img class="popup-basket__img" src="img/product-1-small 5.png" alt="Любительская селфи-палка" width="39" height="43">
-                        Любительская селфи-палка
-                    </a>
-                    <button class="popup-basket__button" type="button"></button>
-                </li>
-                <li class="popup-basket__basket-item">
-                    <a class="text--popup popup-basket__link" href="blank.html">
-                        <img class="popup-basket__img" src="img/product-2-small 5.png" alt="Профессиональная селфи-палка" width="39" height="43">
-                        Профессиональная селфи-палка
-                    </a>
-                    <button class="popup-basket__button" type="button"></button>
-                </li>
-            </ul>
-
-            <div class="popup-basket__total-wrap">
-                <p class="text--popup">Товаров: 2</p> <!--из dl-dt-dd передалли в два p, т.к. 1. это проще стилизовать и размещать; 2. dl-dt-dd в основном для задания свойств, характеристик-->
-                <p class="text--popup">Сумма: 2000 ₽</p>
+                    <div class="popup-basket__total-wrap">
+                        <p class="text--popup">Товаров: 2</p> <!--из dl-dt-dd передалли в два p, т.к. 1. это проще стилизовать и размещать; 2. dl-dt-dd в основном для задания свойств, характеристик-->
+                        <p class="text--popup">Сумма: 2000 ₽</p>
+                    </div>
+                    
+                    <div class="popup-basket__link-wrap">
+                        <a class="button button--popup-basket" href="blank.html">
+                            Открыть корзину
+                        </a>
+                    </div>
+                    
+                </div>
             </div>
-            
-            <div class="popup-basket__link-wrap">
-                <a class="button button--popup-basket" href="blank.html">
-                    Открыть корзину
-                </a>
-            </div>
-            
         </div>
         
 
         <div class="header-catalog">
             <button class="button header-catalog__button focus" type="button">Каталог товаров</button>
-            <ul class="header-catalog__dropdown" hidden> <!--раскрывающееся меню. В виде списка списков, удобно для стилизации, семантически правильно. ОК-->
+            <ul class="header-catalog__dropdown"> <!--раскрывающееся меню. В виде списка списков, удобно для стилизации, семантически правильно. ОК-->
                 <li class="header-catalog__column">
                     <ul class="header-catalog__list">
                         <li class="header-catalog__item">
@@ -366,7 +367,7 @@
             <div class="delivery-order container">
                 <button class="button delivery-order__button">
                     Доставим редкий товар под заказ
-                    <div class="delivery-order__icon"></div>
+                    <span class="delivery-order__icon"></span>
                 </button>
             </div>
     
@@ -444,7 +445,7 @@
             <section class="footer-find">
                 <h2 class="content-hidden">Как нас найти?</h2>
     
-                <a class="footer-find__logo logo focus" href="index.html"><img class="footer-find__img" src="img/icons/logo-footer.svg" alt="Логотип магазина Device - Магазин гаджетов" width="144,9" height="36"></a>
+                <a class="footer-find__logo logo focus" href="index.html"><img class="footer-find__img" src="img/icons/logo-footer.svg" alt="Логотип магазина Device - Магазин гаджетов" width="145" height="36"></a>
                 <p class="text--small footer-find__address">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.
                 </p>
             </section>
@@ -496,41 +497,39 @@
 
     <section class="modal-delivery" hidden><!--модальное окно для оформления доставки-->
             <h2 class="text--title">Доставка под заказ</h2>
-            <button class="modal-delivery__close"></button>
+            <button class="modal-delivery__close focus"></button>
 
             <form class="modal-delivery__form" action="#" method="post">
 
                 <div class="modal-delivery__item">
                     <label class="text--label" for="user-name-delivery">Ваше имя:</label>
-                    <input class="modal-delivery__input modal-delivery__input--user text--small" id="user-name-delivery" type="text" placeholder="Введите имя">
+                    <input class="modal-delivery__input modal-delivery__input--user text--small focus" id="user-name-delivery" type="text" placeholder="Введите имя">
                 </div>
                 <div class="modal-delivery__item">
                     <label class="text--label" for="email-delivery">Ваш e-mail:</label>
-                    <input class="modal-delivery__input modal-delivery__input--email text--small" id="email-delivery" type="email" placeholder="Введите e-mail">
+                    <input class="modal-delivery__input modal-delivery__input--email text--small focus" id="email-delivery" type="email" placeholder="Введите e-mail">
                 </div>
-                <div class="modal-delivery__item ">
+                <div class="modal-delivery__item">
                     <label class="text--label" for="request-delivery">Что нужно привезти:</label>
-                    <input class="modal-delivery__input modal-delivery__input--request text--small"  id="request-delivery" type="text" placeholder="В свободной форме"> 
+                    <input class="modal-delivery__input modal-delivery__input--request text--small focus"  id="request-delivery" type="text" placeholder="В свободной форме"> 
                 </div>
                    
-                <div class="quantity">
+                <div class="quantity modal-delivery__item">
                     
                     <label class="text--label quantity__trigger-popup" for="quantity-delivery">Количество:</label>
-                    
-                    <div class="quantity__group">
-                        <button class="quantity__button quantity__button--minus" type="button"></button>
-                        <input class="modal-delivery__input quantity_input text--small" id="quantity-delivery" type="text" placeholder="1">
-                        <button class="quantity__button quantity__button--plus" type="button"></button>
-                    </div>
-
-                    <div class="quantity__popup">
+                    <div class="quantity__popup" hidden>
                         <p class="text--popup"> <!--ПОПАП-->
                             Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.
                         </p>
                     </div>
+                    <div class="quantity__group">
+                        <button class="quantity__button quantity__button--minus focus" type="button"></button>
+                        <input class="modal-delivery__input quantity_input text--small focus" id="quantity-delivery" type="text" placeholder="1">
+                        <button class="quantity__button quantity__button--plus focus" type="button"></button>
+                    </div>
                 </div>
 
-                <button class="button button--special" type="submit">Отправить</button>
+                <button class="button button--special modal-delivery__button focus" type="submit">Отправить</button>
             </form>
         </section>
 
