@@ -552,7 +552,7 @@ figure {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header-catalog__button:hover::after {
@@ -577,6 +577,20 @@ figure {
     background: url('../img/icons/catalog-button-open.svg') no-repeat;
 }
 
+@keyframes dropdown {
+    0% {                /* Старт анимации */
+        opacity: 0;
+        transform: translate3d(0px, -110%, 0px);
+    }
+    80% {
+        transform: translate3d(0px, 10%, 0px);
+    }
+    100% {              /* в финале анимации - финал это заданная 0.55s */
+        opacity: 1;
+        transform: none;
+    }
+}
+
 .header-catalog__dropdown {
     display: none;
 }
@@ -593,6 +607,7 @@ figure {
     left: 0;
     padding: 14px 60px 60px;
     box-sizing: border-box;
+    animation: dropdown 0.4s;
 }
 
 .header-catalog__link {
@@ -1402,21 +1417,46 @@ figure {
 
 /* Modal Delivery */
 
-.modal-delivery {
+/*Анимация обои*/
+
+@keyframes popup {
+    0%{
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100%{
+        transform:translateX(0%);
+        opacity: 1;
+    }
+  }
+
+.modal__wrap {
+    /*opacity: 0;*/
     position: fixed;
     right: 0;
     left: 0;
     top: 0;
     bottom: 0;
     margin: auto;
-    z-index: 100;
+    z-index: 101;
     border: 10px solid var(--basic-black);
     box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
     background: var(--basic-white);
     padding: 62px 70px;
     box-sizing: border-box;
     max-width: 920px;
-    height: fit-content;
+    height: fit-content; 
+    animation: popup 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.modal-delivery {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(240, 240, 240, 0.9);
 }
 
 .modal-delivery h2{
@@ -1457,6 +1497,7 @@ figure {
     height: 60px;
     padding: 0;
     padding-left: 20px;
+    padding-right: 50px;
 }
 
 .modal-delivery__input:hover {
@@ -1514,6 +1555,7 @@ figure {
     background-color: var(--basic-light);
     text-align: center;
     padding-left: 0;
+    padding-right: 0;
     width: 60px;
 }
 

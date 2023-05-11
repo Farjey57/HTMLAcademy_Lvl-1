@@ -8,7 +8,7 @@
     <!-- <meta name="viewport" content="width=device-width, inirial-scale=1">  -->
 
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"> <!--32х32, выбрана конвертация png to ico, т.к. меньше по размеру в 10 раз!! size='any' для того, чтобы использовался только для тех браузеров, которые не поддерживают другие иконки-->
     <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml"> <!--svg ресайзится сам. Удобен, но не везде поддерживается.-->
@@ -126,7 +126,7 @@
                     <a class="button main-navigation__link focus" href="blanc.html">Гарантия</a>
                 </li>
                 <li class="main-navigation__item">
-                    <a class="button main-navigation__link focus" href="blanc.html">Контакт<span>ы</span></a>
+                    <a class="button main-navigation__link main-navigation__contacts focus" href="blanc.html">Контакт<span>ы</span></a>
                 </li>
             </ul>
         </nav>
@@ -495,44 +495,48 @@
     </footer>
 
 
-    <section class="modal-delivery" hidden><!--модальное окно для оформления доставки-->
-            <h2 class="text--title">Доставка под заказ</h2>
-            <button class="modal-delivery__close focus"></button>
+    <section class="modal-delivery"><!--модальное окно для оформления доставки-->
+            <div class="modal__wrap">
+                <h2 class="text--title">Доставка под заказ</h2>
+                <button class="modal-delivery__close focus"></button>
 
-            <form class="modal-delivery__form" action="#" method="post">
+                <form class="modal-delivery__form" action="#" method="post">
 
-                <div class="modal-delivery__item">
-                    <label class="text--label" for="user-name-delivery">Ваше имя:</label>
-                    <input class="modal-delivery__input modal-delivery__input--user text--small focus" id="user-name-delivery" type="text" placeholder="Введите имя">
-                </div>
-                <div class="modal-delivery__item">
-                    <label class="text--label" for="email-delivery">Ваш e-mail:</label>
-                    <input class="modal-delivery__input modal-delivery__input--email text--small focus" id="email-delivery" type="email" placeholder="Введите e-mail">
-                </div>
-                <div class="modal-delivery__item">
-                    <label class="text--label" for="request-delivery">Что нужно привезти:</label>
-                    <input class="modal-delivery__input modal-delivery__input--request text--small focus"  id="request-delivery" type="text" placeholder="В свободной форме"> 
-                </div>
-                   
-                <div class="quantity modal-delivery__item">
+                    <div class="modal-delivery__item">
+                        <label class="text--label" for="user-name-delivery">Ваше имя:</label>
+                        <input class="modal-delivery__input modal-delivery__input--user text--small focus" id="user-name-delivery" type="text" placeholder="Введите имя">
+                    </div>
+                    <div class="modal-delivery__item">
+                        <label class="text--label" for="email-delivery">Ваш e-mail:</label>
+                        <input class="modal-delivery__input modal-delivery__input--email text--small focus" id="email-delivery" type="email" placeholder="Введите e-mail">
+                    </div>
+                    <div class="modal-delivery__item">
+                        <label class="text--label" for="request-delivery">Что нужно привезти:</label>
+                        <input class="modal-delivery__input modal-delivery__input--request text--small focus"  id="request-delivery" type="text" placeholder="В свободной форме"> 
+                    </div>
                     
-                    <label class="text--label quantity__trigger-popup" for="quantity-delivery">Количество:</label>
-                    <div class="quantity__popup" hidden>
-                        <p class="text--popup"> <!--ПОПАП-->
-                            Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.
-                        </p>
+                    <div class="quantity modal-delivery__item">
+                        
+                        <label class="text--label quantity__trigger-popup" for="quantity-delivery">Количество:</label>
+                        <div class="quantity__popup" hidden>
+                            <p class="text--popup"> <!--ПОПАП-->
+                                Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.
+                            </p>
+                        </div>
+                        <div class="quantity__group">
+                            <button class="quantity__button quantity__button--minus focus" type="button"></button>
+                            <input class="modal-delivery__input quantity_input text--small focus" id="quantity-delivery" type="text" placeholder="1">
+                            <button class="quantity__button quantity__button--plus focus" type="button"></button>
+                        </div>
                     </div>
-                    <div class="quantity__group">
-                        <button class="quantity__button quantity__button--minus focus" type="button"></button>
-                        <input class="modal-delivery__input quantity_input text--small focus" id="quantity-delivery" type="text" placeholder="1">
-                        <button class="quantity__button quantity__button--plus focus" type="button"></button>
-                    </div>
-                </div>
 
-                <button class="button button--special modal-delivery__button focus" type="submit">Отправить</button>
-            </form>
+                    <button class="button button--special modal-delivery__button focus" type="submit">Отправить</button>
+                </form>
+            </div>
         </section>
 
+        <script src="js/header-catalog.js"></script>
+        <script src="js/modalDelivery.js"></script>
 
 </body>
 
