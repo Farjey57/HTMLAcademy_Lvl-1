@@ -7,8 +7,8 @@
 
     <!-- <meta name="viewport" content="width=device-width, inirial-scale=1">  -->
 
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"> <!--32х32, выбрана конвертация png to ico, т.к. меньше по размеру в 10 раз!! size='any' для того, чтобы использовался только для тех браузеров, которые не поддерживают другие иконки-->
     <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml"> <!--svg ресайзится сам. Удобен, но не везде поддерживается.-->
@@ -157,7 +157,8 @@
                     </li>
                 </ul> 
 
-                <!--1-->
+                <!--1 обернуть все в один контейнер. Отвязать стили от тегов. transition не на ховере, а на элементе, чтобы работало в обе стороны-->
+
 
                 <article class="slider-content slider-content--active">
                     
@@ -421,7 +422,7 @@
                     
                     <div class="subscription__form-wrap">
                         <form class="subscription__form" action="#" method="post"> <!--лэйбл должен обязательно быть до input к которому применяется? Вроде можно-->
-                            <input class="subscription__input" id="email-subscribe" type="email" placeholder="Ваш e-mail">
+                            <input class="subscription__input" id="email-subscribe" type="email" placeholder="Ваш e-mail" required>
                             <label for="email-subscribe"></label> 
                             <button class="button subscription__button focus" type="submit">Подписаться</button>
                         </form>
